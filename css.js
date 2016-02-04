@@ -1,1 +1,18 @@
-module.exports = require('react-native').StyleSheet.create({"welcome":{"fontSize":20,"textAlign":"center","marginTop":10,"marginBottom":10,"marginRight":10,"marginLeft":10}});
+module.exports = require('react-native').StyleSheet.create({
+	"welcome": {
+	  "fontSize": 20,
+	  "textAlign": "center",
+	  "margin": 10
+	},
+	"instructions": {
+	  "textAlign": "center",
+	  "color": "#333333",
+	  "marginBottom": 5
+	},
+	"container": {
+		"flex":1,
+		"justifyContent":"center",
+		"alignItems":"center",
+		"backgroundColor":"yellow"
+	}
+});
