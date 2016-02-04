@@ -40,7 +40,11 @@ module.exports = function(grunt) {
         command: 'react-native-css -i public/css/style.css -o ./css.js'
       },
       launch: {
+<<<<<<< HEAD
         command: 'node node_modules/react-native/local-cli/cli.js start'
+=======
+        command: 'node node_modules/react-native/local-cli/cli.js start --dev'
+>>>>>>> 89cc10b7953e69239ab04ec79cb67f0e8ae2f9a0
       }
     }
   });

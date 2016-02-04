@@ -2,7 +2,11 @@ container {
   flex: 1;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   background-color: #F5FCFF;
+=======
+  background-color: yellow;
+>>>>>>> 89cc10b7953e69239ab04ec79cb67f0e8ae2f9a0
 },
 welcome {
   font-size: 20;
