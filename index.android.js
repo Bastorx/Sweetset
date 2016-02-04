@@ -11,6 +11,7 @@ import React, {
   View
 } from 'react-native';
 
+import Menu from './menu';
 class Sweetset extends Component {
   render() {
     return (
@@ -24,6 +25,7 @@ class Sweetset extends Component {
         <Text style={styles.instructions}>
           Shake or press menu button for dev menu
         </Text>
+        <Menu />
       </View>
     );
   }
