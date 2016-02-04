@@ -11,10 +11,16 @@ class Menu extends Component {
   render() {
     return (
       <SideMenu>
+        // {this.renderSidebar}
         <Text>Test</Text>
       </SideMenu>
     );
   }
+  // renderSidebar() {
+  //   return (
+
+  //   )
+  // }
 }
 
 module.exports = Menu;
