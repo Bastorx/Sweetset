@@ -32,3 +32,10 @@ local.properties
 #
 node_modules/
 npm-debug.log
+<<<<<<< HEAD
+=======
+
+.env
+android
+ios
+>>>>>>> 549aa5e52325790f28fb4042a94c2e6c095ac6cf
