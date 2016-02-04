@@ -1,4 +1,6 @@
 'use strict';
+// import Accueil from './accueil.js';
+
 import React, {
   Component,
   AppRegistry
@@ -18,9 +20,7 @@ class Sweetset extends Component {
   }
   render() {
     return (
-      <Menu>
-        {this.renderPage()}
-      </Menu>
+<Accueil/>
     );
   }
   renderPage() {
@@ -39,10 +39,5 @@ class Sweetset extends Component {
     });
   }
 }
-
-<<<<<<< HEAD
-const styles = require('./css.js');
-=======
->>>>>>> 89cc10b7953e69239ab04ec79cb67f0e8ae2f9a0
 
 AppRegistry.registerComponent('Sweetset', () => Sweetset);

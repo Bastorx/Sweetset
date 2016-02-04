@@ -1,15 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-module.exports = require('react-native').StyleSheet.create({"container":{"flex":1,"justifyContent":"center","alignItems":"center","backgroundColor":"#F5FCFF"}});
-=======
-module.exports = require('react-native').StyleSheet.create({"container":{"flex":1,"justifyContent":"center","alignItems":"center","backgroundColor":"yellow"}});
->>>>>>> 89cc10b7953e69239ab04ec79cb67f0e8ae2f9a0
-=======
 module.exports = require('react-native').StyleSheet.create({
 	"welcome": {
 	  "fontSize": 20,
 	  "textAlign": "center",
-	  "margin": 10
+	  "margin": 10,
+	  "opacity":1
+	},
+	"welcome": {
+	  "fontSize": 20,
+	  "textAlign": "center",
+	  "margin": 10,
+	  "opacity":1, 
+	  "bottom":0
+	},
+	"background": {
+		"flex":1,
+		"width":null,
+		"height":null
 	},
 	"instructions": {
 	  "textAlign": "center",
@@ -19,8 +25,12 @@ module.exports = require('react-native').StyleSheet.create({
 	"container": {
 		"flex":1,
 		"justifyContent":"center",
-		"alignItems":"center",
-		"backgroundColor":"yellow"
+		"alignItems":"center"
+	},
+	"logo": {
+		"flex":1,
+		"top":0,
+		"width":150,
+		"height":100
 	}
 });
->>>>>>> 080cac0a1aa5bc280f36f8dedd891756b570b7fd
