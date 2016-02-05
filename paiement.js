@@ -5,6 +5,7 @@ import React, {
   View,
   Text
 } from 'react-native';
+import Button from 'react-native-button';
 import styles from './css.js';
 
 
@@ -14,24 +15,15 @@ class Paiement extends Component {
       <View style={styles.container}>
         <Text>Payment</Text>
         <Text>Nom titulaire :</Text>
-        <TextInput
-          style={{
-            aligneItems: "center",
-            alignSelf: "center",
-            justifyContent: "center",
-            top: -10, height: 50, width: 300, padding: 60,
-            borderWidth: 1, borderColor: "#fff", color: "#fff",
-            backgroundColor: "transparent"
-          }}
-          placeholder="Password"
-          placeholderTextColor="blue"
-          onChangeText={(text) => this.setState({c: text})}/>
-          
         <Text>Numéro de carte :</Text>
         <Text>GCV :</Text>
-        <View style={styles.button}>
-          <Text>Validez</Text>
-        </View>
+        <Button
+          style={{fontSize: 20, color: 'green'}}
+          styleDisabled={{color: 'red'}}
+          onPress={this._handlePress}
+        >
+          Validez!
+        </Button>
       </View>
     );
   }
