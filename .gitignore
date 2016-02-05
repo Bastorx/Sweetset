@@ -35,3 +35,5 @@ npm-debug.log
 .env
 android
 ios
+public/components
+public/components/**

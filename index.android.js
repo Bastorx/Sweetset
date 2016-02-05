@@ -5,18 +5,13 @@ import React, {
   Component,
   AppRegistry
 } from 'react-native';
-<<<<<<< HEAD
-=======
 
 import styles from './css.js';
->>>>>>> 58d051bfb9ec855c6cfafcbbe94d6553e734315d
 
 import Menu from './components/Menu';
 
 import Accueil from './pages/Accueil';
-<<<<<<< HEAD
-import Test_page from './pages/Test_page';
-=======
+
 import Blog from './pages/Blog';
 import Commande from './pages/Commande';
 import Connexion from './pages/Connexion';
@@ -34,8 +29,6 @@ import ThisIsLaFamilia from './pages/SET_BY_SET/ThisIsLaFamilia';
 import Entreprises from './pages/SET_ONE_SHOT/Entreprises';
 import Ephemeres from './pages/SET_ONE_SHOT/Ephemeres';
 
->>>>>>> 58d051bfb9ec855c6cfafcbbe94d6553e734315d
-
 class Sweetset extends Component {
   constructor(props) {
       super(props);
@@ -45,17 +38,12 @@ class Sweetset extends Component {
   }
   render() {
     return (
-<<<<<<< HEAD
       <Menu changePage={this.changePage}>
-=======
-      <Menu changePage={this.changePage} state={this.state.page}>
->>>>>>> 58d051bfb9ec855c6cfafcbbe94d6553e734315d
         {this.renderPage()}
       </Menu>
     );
   }
   renderPage() {
-<<<<<<< HEAD
       switch(this.state.page) {
         case "accueil": 
           return (<Accueil />);
@@ -70,7 +58,6 @@ class Sweetset extends Component {
   }
   changePage = (page, e) => {
       this.setState({
-=======
     switch(this.state.page) {
       case "accueil": 
         return (<Accueil />);
@@ -115,15 +102,9 @@ class Sweetset extends Component {
   }
   changePage = (page, e) => {
     this.setState({
->>>>>>> 58d051bfb9ec855c6cfafcbbe94d6553e734315d
       page: page
     });
   };
 }
 
-<<<<<<< HEAD
-const styles = require('./css.js');
-
-=======
->>>>>>> 58d051bfb9ec855c6cfafcbbe94d6553e734315d
 AppRegistry.registerComponent('Sweetset', () => Sweetset);
