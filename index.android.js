@@ -25,7 +25,6 @@ class Sweetset extends Component {
     );
   }
   renderPage() {
-    console.log("ICICICICI");
     switch(this.state.page) {
       case "accueil": 
         return (<Accueil />);
@@ -35,7 +34,7 @@ class Sweetset extends Component {
       break;
     }
   }
-  changePage(page) {
+  changePage = (e, page) => {
     this.setState({
       page: page
     });
