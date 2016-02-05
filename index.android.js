@@ -37,56 +37,48 @@ class Sweetset extends Component {
       };
   }
   render() {
-    return (
-<<<<<<< HEAD
-      <Accueil changePage={this.changePage}/>
-=======
-      <Menu changePage={this.changePage} state={this.state.page}>
-        {this.renderPage()}
-      </Menu>
->>>>>>> 58d051bfb9ec855c6cfafcbbe94d6553e734315d
-    );
+    return this.renderPage();
   }
   renderPage() {
     switch(this.state.page) {
       case "accueil": 
-        return (<Accueil />);
+        return (<Accueil changePage={this.changePage.bind(this)}/>);
       break;
       case "blog":
-        return (<Blog />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><Blog /></Menu>);
       break;
       case "champagnes":
-        return (<Champagnes />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><Champagnes /></Menu>);
       break;
       case "sweets":
-        return (<Sweets />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><Sweets /></Menu>);
       break;
       case "vins":
-        return (<Vins />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><Vins /></Menu>);
       break;
       case "whisky":
-        return (<Whisky />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><Whisky /></Menu>);
       break;
       case "chillout":
-        return (<Chillout />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><Chillout /></Menu>);
       break;
       case "duLove":
-        return (<DuLove />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><DuLove /></Menu>);
       break;
       case "theOffice":
-        return (<TheOffice />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><TheOffice /></Menu>);
       break;
       case "thisIsLaFamilia":
-        return (<ThisIsLaFamilia />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><ThisIsLaFamilia /></Menu>);
       break;
       case "entreprises":
-        return (<Entreprises />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><Entreprises /></Menu>);
       break;
       case "ephemeres":
-        return (<Ephemeres />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><Ephemeres /></Menu>);
       break;
       default:
-        return (<Accueil />);
+        return (<Accueil changePage={this.changePage}/>);
       break;
     }
   }
@@ -97,8 +89,4 @@ class Sweetset extends Component {
   };
 }
 
-<<<<<<< HEAD
 AppRegistry.registerComponent('Sweetset', () => Sweetset);
-=======
-AppRegistry.registerComponent('Sweetset', () => Sweetset);
->>>>>>> 58d051bfb9ec855c6cfafcbbe94d6553e734315d
