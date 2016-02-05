@@ -14,15 +14,6 @@ class paiement extends Component {
       <View style={styles.container}>
         <Text>Payment</Text>
       </View>
-      <View style={styles.container}>
-        <Text>Nom titulaire :</Text>
-      </View>
-      <View style={styles.container}>
-        <Text>Numéro de la carte :</Text>
-      </View>
-      <View style={styles.container}>
-        <Text>GCV :</Text>
-      </View>
     );
   }
 }
