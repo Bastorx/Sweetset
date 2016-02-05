@@ -1,8 +1,16 @@
 module.exports = require('react-native').StyleSheet.create({
-	"welcome": {
-	  "fontSize": 20,
+	"warning": {
+	  "bottom":0,
+	  "fontSize": 10,
+	  "color":"black",
 	  "textAlign": "center",
-	  "margin": 10
+	  "margin": 10,
+	  "opacity":1
+	},
+	"background": {
+		"flex":1,
+		"width":null,
+		"height":null
 	},
 	"instructions": {
 	  "textAlign": "center",
@@ -12,7 +20,10 @@ module.exports = require('react-native').StyleSheet.create({
 	"container": {
 		"flex":1,
 		"justifyContent":"center",
-		"alignItems":"center",
-		"backgroundColor":"yellow"
+		"alignItems":"center"
+	},
+	"logo": {
+		"width":200,
+		"height":150
 	}
 });
