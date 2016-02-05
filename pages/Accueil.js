@@ -1,19 +1,18 @@
 'use strict';
 
 import React, {
-  Component,
-  View,
-  Text
+  Component
 } from 'react-native';
-import styles from '../css.js';
 
+import IFrame from '../components/IFrame';
 
-class Accueil extends Component {
+class Accueil  extends Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Bienvenue sur sweetset</Text>
-      </View>
+        <IFrame
+          ref="accueil"
+          url={"https://www.sweetset.paris/"}
+        />
     );
   }
 }

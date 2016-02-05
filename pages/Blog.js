@@ -1,34 +1,18 @@
 'use strict';
 
 import React, {
-  Component,
-  View,
-  Text
+  Component
 } from 'react-native';
-import styles from '../css.js';
 
-const WebView = require('react-native-webview-android');
+import IFrame from '../components/IFrame';
 
 class Blog extends Component {
   render() {
     return (
-      <View>
-        <Text>test</Text>
-        <WebView
+        <IFrame
           ref="blog"
-          style={{
-            width: 100,
-            height: 100,
-            position: 'absolute',
-            top: 0,
-            left: 0
-          }}
-          javaScriptEnabled={true}
-          geolocationEnabled={false}
-          builtInZoomControls={false}
-          url="https://www.google.com"
+          url={"https://www.sweetset.paris/blog"}
         />
-      </View>
     );
   }
 }

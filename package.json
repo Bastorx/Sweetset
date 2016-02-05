@@ -16,7 +16,6 @@
     "grunt-shell": "^1.1.2",
     "react-native": "^0.19.0",
     "react-native-side-menu": "^0.18.0",
-    "react-native-webview-android": "^1.0.12",
     "superagent": "^1.7.2"
   },
   "devDependencies": {
