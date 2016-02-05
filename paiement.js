@@ -3,6 +3,7 @@
 import React, {
   Component,
   View,
+  TextInput,
   Text
 } from 'react-native';
 import Button from 'react-native-button';
@@ -10,18 +11,37 @@ import styles from './css.js';
 
 
 class Paiement extends Component {
+  constructor(props) {
+      super(props);
+      this.state = {
+          text: ""
+      };
+  }
   render() {
     return (
       <View style={styles.container}>
         <Text>Payment</Text>
         <Text>Nom titulaire :</Text>
+
           <TextInput
-            style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+            style={{height: 40, width: 170, borderColor: 'gray', borderWidth: 1}}
             onChangeText={(text) => this.setState({text})}
             value={this.state.text}/>
-            
+
         <Text>Numéro de carte :</Text>
+
+        <TextInput
+            style={{height: 40, width: 230, borderColor: 'gray', borderWidth: 1}}
+            onChangeText={(text) => this.setState({text})}
+            value={this.state.text}/>
+
         <Text>CGV :</Text>
+
+        <TextInput
+            style={{height: 40, width: 40, borderColor: 'gray', borderWidth: 1}}
+            onChangeText={(text) => this.setState({text})}
+            value={this.state.text}/>
+
         <Button
           style={{fontSize: 20, color: 'black'}}
           styleDisabled={{color: 'red'}}
