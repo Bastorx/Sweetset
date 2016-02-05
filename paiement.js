@@ -18,5 +18,5 @@ class Paiement extends Component {
   }
 }
 
-export default paiement;
+export default Paiement;
 
