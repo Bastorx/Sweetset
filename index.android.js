@@ -35,16 +35,11 @@ class Sweetset extends Component {
         break;
       }
   }
-  changePage(page) {
+  changePage = (e, page) => {
     this.setState({
       page: page
     });
-  }
+  };
 }
-
-<<<<<<< HEAD
-const styles = require('./css.js');
-=======
->>>>>>> 89cc10b7953e69239ab04ec79cb67f0e8ae2f9a0
 
 AppRegistry.registerComponent('Sweetset', () => Sweetset);
