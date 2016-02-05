@@ -30,6 +30,7 @@ class Menu extends Component {
   render() {
     const menu = (
       <View>
+<<<<<<< HEAD
         <ExampleComponent changePage={this.props.changePage} link="Produit du moment">Produit du moment</ExampleComponent> 
         <ExampleComponent changePage={this.props.changePage} link="Set Shop">Set Shop</ExampleComponent>
         <ExampleComponent changePage={this.props.changePage} link="Set By Me">Set By Me</ExampleComponent>
@@ -37,6 +38,14 @@ class Menu extends Component {
       );
     return (
       <SideMenu menu={menu} style={styles.sidebar} openMenuOffset={150}>
+=======
+        <Text onPress={this.props.changePage.bind(null, "blog")}>Ici le sidemenu</Text>
+        <Text>{this.props.state}</Text>
+      </View>
+      );
+    return (
+      <SideMenu menu={menu} style={styles.sidebar}>
+>>>>>>> 58d051bfb9ec855c6cfafcbbe94d6553e734315d
         {this.props.children}
       </SideMenu>
     );

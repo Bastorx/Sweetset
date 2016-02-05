@@ -6,15 +6,15 @@ import React, {
 
 import IFrame from '../components/IFrame';
 
-class Accueil  extends Component {
+class Blog extends Component {
   render() {
     return (
         <IFrame
-          ref="accueil"
-          url={"https://www.sweetset.paris/"}
+          ref="blog"
+          url={"https://www.sweetset.paris/blog"}
         />
     );
   }
 }
 
-export default Accueil;
+export default Blog;
