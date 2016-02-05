@@ -23,7 +23,8 @@ module.exports = require('react-native').StyleSheet.create({
 		"alignItems":"center"
 	},
 	"logo": {
-		"width":200,
-		"height":150
+		"width":300,
+		"height":200,
+		"opacity":0.8
 	}
 });
