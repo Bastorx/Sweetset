@@ -17,7 +17,7 @@ class Paiement extends Component {
         <Text>Numéro de carte :</Text>
         <Text>GCV :</Text>
         <View style={styles.button}>
-        !
+          <Text>Validez</Text>
         </View>
       </View>
     );
