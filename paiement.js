@@ -8,7 +8,7 @@ import React, {
 import styles from './css.js';
 
 
-class paiement extends Component {
+class Paiement extends Component {
   render() {
     return (
       <View style={styles.container}>
