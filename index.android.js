@@ -11,7 +11,7 @@ import Menu from './components/Menu';
 
 import Accueil from './pages/Accueil';
 
-import payment from './paiement';
+import Payment from './paiement';
 
 class Sweetset extends Component {
   constructor(props) {
