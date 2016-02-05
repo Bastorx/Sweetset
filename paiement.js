@@ -8,29 +8,24 @@ import React, {
 import styles from '../css.js';
 
 
-class Sweetset extends Component {
+class paiement extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Payment
-        </Text>
-        <Text style={styles.instructions}>
-          Name :
-        </Text>
-        <Text style={styles.instructions}>
-          Card number :
-        </Text>
-        <Text style={styles.instructions}>
-          date :
-        </Text>
-        <Text style={styles.instructions}>
-          pictogramme :
-        </Text>
+        <Text>Payment</Text>
+      </View>
+      <View style={styles.container}>
+        <Text>Nom titulaire :</Text>
+      </View>
+      <View style={styles.container}>
+        <Text>Numéro de la carte :</Text>
+      </View>
+      <View style={styles.container}>
+        <Text>GCV :</Text>
       </View>
     );
   }
 }
 
-export default Accueil;
+export default paiement;
 
