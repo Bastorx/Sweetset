@@ -17,5 +17,8 @@ module.exports = require('react-native').StyleSheet.create({
 	},
 	"sidebar": {
 		"backgroundColor":"#000000"
+	},
+	"webView": {
 	}
 });
+
