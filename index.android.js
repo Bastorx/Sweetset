@@ -3,6 +3,7 @@ import React, {
   Component,
   AppRegistry
 } from 'react-native';
+
 import styles from './css.js';
 
 import Menu from './components/Menu';
@@ -24,14 +25,15 @@ class Sweetset extends Component {
     );
   }
   renderPage() {
-      switch(this.state.page) {
-        case "accueil": 
-          return (<Accueil />);
-        break;
-        default:
-          return (<Accueil />);
-        break;
-      }
+    console.log("ICICICICI");
+    switch(this.state.page) {
+      case "accueil": 
+        return (<Accueil />);
+      break;
+      default:
+        return (<Accueil />);
+      break;
+    }
   }
   changePage(page) {
     this.setState({

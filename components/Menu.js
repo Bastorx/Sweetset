@@ -13,7 +13,7 @@ class Menu extends Component {
   render() {
     const menu = (<Text>Ici le sidemenu</Text>);
     return (
-      <SideMenu menu={menu}>
+      <SideMenu menu={menu} style={styles.sidebar}>
         {this.props.children}
       </SideMenu>
     );

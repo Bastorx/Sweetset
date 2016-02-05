@@ -14,5 +14,8 @@ module.exports = require('react-native').StyleSheet.create({
 		"justifyContent":"center",
 		"alignItems":"center",
 		"backgroundColor":"yellow"
+	},
+	"sidebar": {
+		"backgroundColor":"#000000"
 	}
 });
