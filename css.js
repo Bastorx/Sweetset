@@ -32,12 +32,12 @@ module.exports = require('react-native').StyleSheet.create({
 		"top":0,
 		"width":150,
 		"height":100
-	}
+	},
 	"button": {
-    "textAlign": 'center',
-    "color": '#ffffff',
-    "marginBottom": 7,
-    "border": 1,
-    "borderRadius": 2
-  }
+	    "textAlign": 'center',
+	    "color": '#ffffff',
+	    "marginBottom": 7,
+	    "border": 1,
+	    "borderRadius": 2
+  	}
 });
