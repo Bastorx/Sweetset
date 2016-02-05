@@ -86,7 +86,7 @@ class Sweetset extends Component {
       break;
     }
   }
-  changePage = (e, page) => {
+  changePage = (page, e) => {
     this.setState({
       page: page
     });
