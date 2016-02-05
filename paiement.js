@@ -26,21 +26,21 @@ class Paiement extends Component {
           <TextInput
             style={{height: 40, width: 170, borderColor: 'gray', borderWidth: 1}}
             onChangeText={(text) => this.setState({text})}
-            value={this.state.text}/>
+            value={this.state.nom}/>
 
         <Text>Numéro de carte :</Text>
 
         <TextInput
             style={{height: 40, width: 230, borderColor: 'gray', borderWidth: 1}}
             onChangeText={(text) => this.setState({text})}
-            value={this.state.text}/>
+            value={this.state.numerocard}/>
 
         <Text>CGV :</Text>
 
         <TextInput
             style={{height: 40, width: 40, borderColor: 'gray', borderWidth: 1}}
             onChangeText={(text) => this.setState({text})}
-            value={this.state.text}/>
+            value={this.state.CGV}/>
 
         <Button
           style={{fontSize: 20, color: 'black'}}

@@ -27,9 +27,8 @@ class Sweetset extends Component {
     );
   }
   renderPage() {
-<<<<<<< HEAD
       switch(this.state.page) {
-        case "accueil": 
+        case "Paiement": 
           return (<Paiement />);
         break;
         default:
