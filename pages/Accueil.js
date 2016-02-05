@@ -1,6 +1,7 @@
 'use strict';
 
 import React, {
+<<<<<<< HEAD
   Component,
   Platform,
   Image,
@@ -25,6 +26,20 @@ class Accueil extends Component {
         <Text style={styles.warning}>L'abus d'alcool est dangereux pour la santé, à consommer avec modération!</Text>
       </View>
       </Image>
+=======
+  Component
+} from 'react-native';
+
+import IFrame from '../components/IFrame';
+
+class Accueil  extends Component {
+  render() {
+    return (
+        <IFrame
+          ref="accueil"
+          url={"https://www.sweetset.paris/"}
+        />
+>>>>>>> 58d051bfb9ec855c6cfafcbbe94d6553e734315d
     );
   }
   _handlePress() {

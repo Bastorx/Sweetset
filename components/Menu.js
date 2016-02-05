@@ -11,9 +11,14 @@ import SideMenu from 'react-native-side-menu';
 
 class Menu extends Component {
   render() {
-    const menu = (<Text>Ici le sidemenu</Text>);
+    const menu = (
+      <View>
+        <Text onPress={this.props.changePage.bind(null, "blog")}>Ici le sidemenu</Text>
+        <Text>{this.props.state}</Text>
+      </View>
+      );
     return (
-      <SideMenu menu={menu}>
+      <SideMenu menu={menu} style={styles.sidebar}>
         {this.props.children}
       </SideMenu>
     );

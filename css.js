@@ -21,6 +21,7 @@ module.exports = require('react-native').StyleSheet.create({
 	"container": {
 		"flex":1,
 		"justifyContent":"center",
+<<<<<<< HEAD
 		"alignItems":"center"
 	},
 	"logo": {
@@ -29,3 +30,15 @@ module.exports = require('react-native').StyleSheet.create({
 		"opacity":0.9,
 	}
 });
+=======
+		"alignItems":"center",
+		"backgroundColor":"yellow"
+	},
+	"sidebar": {
+		"backgroundColor":"#000000"
+	},
+	"webView": {
+	}
+});
+
+>>>>>>> 58d051bfb9ec855c6cfafcbbe94d6553e734315d
