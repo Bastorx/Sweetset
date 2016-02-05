@@ -5,6 +5,7 @@ import React, {
   Component,
   AppRegistry
 } from 'react-native';
+
 import styles from './css.js';
 
 import Menu from './components/Menu';
@@ -26,6 +27,7 @@ class Sweetset extends Component {
     );
   }
   renderPage() {
+<<<<<<< HEAD
       switch(this.state.page) {
         case "accueil": 
           return (<Paiement />);
@@ -35,11 +37,13 @@ class Sweetset extends Component {
         break;
       }
   }
-  changePage(page) {
+  changePage = (e, page) => {
     this.setState({
       page: page
     });
-  }
+  };
 }
 
+
 AppRegistry.registerComponent('Sweetset', () => Sweetset);
+

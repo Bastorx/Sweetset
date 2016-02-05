@@ -39,3 +39,11 @@ module.exports = require('react-native').StyleSheet.create({
 	    "marginBottom": 7,
   	}
 });
+
+		"alignItems":"center",
+		"backgroundColor":"yellow"
+	},
+	"sidebar": {
+		"backgroundColor":"#000000"
+	}
+});
