@@ -22,16 +22,16 @@ class Sweetset extends Component {
   }
   render() {
     return (
-<Accueil/>
+<paiement/>
     );
   }
   renderPage() {
       switch(this.state.page) {
         case "accueil": 
-          return (<Accueil />);
+          return (<paiement />);
         break;
         default:
-          return (<Accueil />);
+          return (<paiement />);
         break;
       }
   }
