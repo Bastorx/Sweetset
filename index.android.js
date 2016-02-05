@@ -8,6 +8,7 @@ import styles from './css.js';
 import Menu from './components/Menu';
 
 import Accueil from './pages/Accueil';
+import Test_page from './pages/Test_page';
 
 class Sweetset extends Component {
   constructor(props) {
@@ -27,6 +28,9 @@ class Sweetset extends Component {
       switch(this.state.page) {
         case "accueil": 
           return (<Accueil />);
+        break;
+        case "Set":
+          return (<Test_page />);
         break;
         default:
           return (<Accueil />);
