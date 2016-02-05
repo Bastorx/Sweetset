@@ -5,7 +5,7 @@ import React, {
   View,
   Text
 } from 'react-native';
-import styles from '../css.js';
+import styles from './css.js';
 
 
 class paiement extends Component {
