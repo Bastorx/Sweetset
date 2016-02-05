@@ -14,7 +14,7 @@ class Sweetset extends Component {
         <Text style={styles.welcome}>
           Payment
         </Text>
-        <Text style={styles.welcome}>
+        <Text style={styles.instructions}>
           Name :
         </Text>
         <Text style={styles.instructions}>
