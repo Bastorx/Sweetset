@@ -1,4 +1,6 @@
 'use strict';
+// import Accueil from './accueil.js';
+
 import React, {
   Component,
   AppRegistry
