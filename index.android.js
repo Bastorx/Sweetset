@@ -20,7 +20,7 @@ class Sweetset extends Component {
   }
   render() {
     return (
-      <Accueil/>
+      <Accueil changePage={this.changePage}/>
     );
   }
   renderPage() {

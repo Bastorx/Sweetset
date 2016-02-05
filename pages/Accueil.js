@@ -7,6 +7,7 @@ import React, {
   View,
   Text,
 } from 'react-native';
+import Button from 'react-native-button';
 import styles from '../css.js';
 
 class Accueil extends Component {
@@ -16,20 +17,18 @@ class Accueil extends Component {
       <View style={styles.container}>
         <Image
         style={styles.logo}
-        source={require('../public/img/logo.jpg')}
+        source={require('../public/img/logo_min.jpg')}
         />
+      <Button onPress={this._handlePress}>
+      <Text>Click me !</Text>
+      </Button>
         <Text style={styles.warning}>L'abus d'alcool est dangereux pour la santé, à consommer avec modération!</Text>
       </View>
       </Image>
     );
   }
-  renderImages() {
-    <View>
-      <Image
-        style={styles.logo}
-        source={require('../public/img/01.jpg')}
-      />
-    </View>
+  _handlePress() {
+    this.props.changePage("main");
   }
 }
 

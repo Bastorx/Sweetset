@@ -5,6 +5,7 @@ module.exports = require('react-native').StyleSheet.create({
 	  "color":"black",
 	  "textAlign": "center",
 	  "margin": 10,
+	  "marginTop":150,
 	  "opacity":1
 	},
 	"background": {
@@ -24,7 +25,7 @@ module.exports = require('react-native').StyleSheet.create({
 	},
 	"logo": {
 		"width":300,
-		"height":200,
-		"opacity":0.8
+		"height":130,
+		"opacity":0.9,
 	}
 });
