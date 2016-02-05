@@ -11,27 +11,27 @@ import Menu from './components/Menu';
 
 import Accueil from './pages/Accueil';
 
-import Payment from './paiement';
+import Paiement from './paiement';
 
 class Sweetset extends Component {
   constructor(props) {
       super(props);
       this.state = {
-          page: "paiement"
+          page: "Paiement"
       };
   }
   render() {
     return (
-<paiement/>
+<Paiement/>
     );
   }
   renderPage() {
       switch(this.state.page) {
         case "accueil": 
-          return (<paiement />);
+          return (<Paiement />);
         break;
         default:
-          return (<paiement />);
+          return (<Paiement />);
         break;
       }
   }
