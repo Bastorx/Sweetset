@@ -13,14 +13,8 @@ class Paiement extends Component {
     return (
       <View style={styles.container}>
         <Text>Payment</Text>
-      </View>
-      <View style={styles.container}>
         <Text>Nom titulaire :</Text>
-      </View>
-      <View style={styles.container}>
         <Text>Numéro de carte :</Text>
-      </View>
-      <View style={styles.container}>
         <Text>GCV :</Text>
       </View>
     );
