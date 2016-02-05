@@ -14,6 +14,13 @@ class Paiement extends Component {
       <View style={styles.container}>
         <Text>Payment</Text>
         <Text>Nom titulaire :</Text>
+        <TextInput
+           style={{height: 40, borderColor: 'gray', borderWidth: 1}}
+           placeholder="Password"
+           placeholdertextcolor="blue"
+           onChangeText={(text) => this.setState({text})}
+           value={this.state.text}
+        />
         <Text>Numéro de carte :</Text>
         <Text>GCV :</Text>
         <View style={styles.button}>
