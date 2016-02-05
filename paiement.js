@@ -3,6 +3,7 @@ import React, {
   AppRegistry,
   Component,
   StyleSheet,
+  TouchableNativeFeedback,
   Text,
   View
 } from 'react-native';
