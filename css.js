@@ -34,7 +34,7 @@ module.exports = require('react-native').StyleSheet.create({
 		"height":100
 	},
 	"button": {
-	    "textAlign": "center",
+	    "textAlign": "right",
 	    "color": "#ffffff",
 	    "marginBottom": 7,
   	}
