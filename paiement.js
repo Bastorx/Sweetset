@@ -4,6 +4,7 @@ import React, {
   Component,
   View,
   TextInput,
+  Image,
   Text
 } from 'react-native';
 import Button from 'react-native-button';
@@ -19,37 +20,49 @@ class Paiement extends Component {
   }
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Payment</Text>
-        <Text>Nom titulaire :</Text>
+      <Image style={{opacity: 0.5}} source={require('./public/img/image2.jpeg')} style={styles.background}>
+        <View style={styles.container}>
+
+          <Text style={{color: 'pink', fontWeight: 'bold'}}>Payment{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
+
+          <Text style={{color: 'pink', fontWeight: 'bold'}}>Nom titulaire :</Text>
+
+            <TextInput
+              style={{height: 40, width: 170, borderColor: '#0000', borderWidth: 1}}
+              onChangeText={(text) => this.setState({text})}
+              value={this.state.nom}/>
+
+          <Text style={{color: 'pink', fontWeight: 'bold'}}>Numéro de carte :</Text>
 
           <TextInput
-            style={{height: 40, width: 170, borderColor: 'gray', borderWidth: 1}}
-            onChangeText={(text) => this.setState({text})}
-            value={this.state.nom}/>
+              style={{height: 40, width: 230, borderColor: '#0000', borderWidth: 1}}
+              onChangeText={(text) => this.setState({text})}
+              value={this.state.numerocard}/>
 
-        <Text>Numéro de carte :</Text>
+          <Text style={{color: 'pink', fontWeight: 'bold'}}>Date Expiration :</Text>
 
-        <TextInput
-            style={{height: 40, width: 230, borderColor: 'gray', borderWidth: 1}}
-            onChangeText={(text) => this.setState({text})}
-            value={this.state.numerocard}/>
+          <TextInput
+              style={{height: 40, width: 80, borderColor: '#0000', borderWidth: 1}}
+              onChangeText={(text) => this.setState({text})}
+              value={this.state.dateexpiration}/>
 
-        <Text>CGV :</Text>
+          <Text style={{color: 'pink', fontWeight: 'bold'}}>CGV :</Text>
 
-        <TextInput
-            style={{height: 40, width: 40, borderColor: 'gray', borderWidth: 1}}
-            onChangeText={(text) => this.setState({text})}
-            value={this.state.CGV}/>
+          <TextInput
+              style={{height: 40, width: 40, borderColor: '#0000', borderWidth: 1}}
+              onChangeText={(text) => this.setState({text})}
+              value={this.state.CGV}/>
 
-        <Button
-          style={{fontSize: 20, color: 'black'}}
-          styleDisabled={{color: 'red'}}
-          onPress={this._handlePress}
-        >
-          Validez
-        </Button>
-      </View>
+          <Button
+            style={{fontSize: 20, color: 'black'}}
+            styleDisabled={{color: 'red'}}
+            onPress={this._handlePress}
+          >
+            Validez{"\n"}{"\n"}
+          </Button>
+          <Image style={styles.icon} source={require('./public/img/paypal_mc_visa_amex_disc_210x80.gif')} />
+        </View> 
+    </Image>
     );
   }
 }
