@@ -1,11 +1,12 @@
 'use strict';
+
 import React, {
-  AppRegistry,
   Component,
-  StyleSheet,
-  Text,
-  View
+  View,
+  Text
 } from 'react-native';
+import styles from '../css.js';
+
 
 class Sweetset extends Component {
   render() {
@@ -31,6 +32,5 @@ class Sweetset extends Component {
   }
 }
 
-const styles = require('./css.js');
+export default Accueil;
 
-AppRegistry.registerComponent('Sweetset', () => Sweetset);

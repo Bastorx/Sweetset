@@ -17,7 +17,7 @@ class Sweetset extends Component {
   constructor(props) {
       super(props);
       this.state = {
-          page: "accueil"
+          page: "paiement"
       };
   }
   render() {
