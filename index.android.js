@@ -1,4 +1,6 @@
 'use strict';
+// import Accueil from './accueil.js';
+
 import React, {
   Component,
   AppRegistry
@@ -38,8 +40,7 @@ class Sweetset extends Component {
     this.setState({
       page: page
     });
-  }
+  };
 }
-
 
 AppRegistry.registerComponent('Sweetset', () => Sweetset);
