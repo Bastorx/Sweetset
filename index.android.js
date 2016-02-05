@@ -3,7 +3,6 @@ import React, {
   Component,
   AppRegistry
 } from 'react-native';
-import styles from './css.js';
 
 import Menu from './components/Menu';
 
@@ -19,7 +18,7 @@ class Sweetset extends Component {
   }
   render() {
     return (
-      <Menu>
+      <Menu changePage={this.changePage}>
         {this.renderPage()}
       </Menu>
     );
@@ -29,7 +28,7 @@ class Sweetset extends Component {
         case "accueil": 
           return (<Accueil />);
         break;
-        case "Set":
+        case "Produit du moment":
           return (<Test_page />);
         break;
         default:
@@ -37,16 +36,13 @@ class Sweetset extends Component {
         break;
       }
   }
-  changePage(page) {
-    this.setState({
+  changePage = (page, e) => {
+      this.setState({
       page: page
     });
-  }
+  };
 }
 
-<<<<<<< HEAD
 const styles = require('./css.js');
-=======
->>>>>>> 89cc10b7953e69239ab04ec79cb67f0e8ae2f9a0
 
 AppRegistry.registerComponent('Sweetset', () => Sweetset);
