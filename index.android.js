@@ -44,20 +44,6 @@ class Sweetset extends Component {
     );
   }
   renderPage() {
-      switch(this.state.page) {
-        case "accueil": 
-          return (<Accueil />);
-        break;
-        case "Produit du moment":
-          return (<Test_page />);
-        break;
-        default:
-          return (<Accueil />);
-        break;
-      }
-  }
-  changePage = (page, e) => {
-      this.setState({
     switch(this.state.page) {
       case "accueil": 
         return (<Accueil />);
@@ -98,7 +84,7 @@ class Sweetset extends Component {
       default:
         return (<Accueil />);
       break;
-    }
+      }
   }
   changePage = (page, e) => {
     this.setState({

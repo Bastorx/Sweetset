@@ -12,7 +12,7 @@ import SideMenu from 'react-native-side-menu';
 import Button from 'apsl-react-native-button';
 // import Test_page from './pages/Test_page';
 
-var ExampleComponent = React.createClass({
+var ButtonMenu = React.createClass({
   render() {
     return (
       <Button
@@ -30,9 +30,18 @@ class Menu extends Component {
   render() {
     const menu = (
       <View>
-        <ExampleComponent changePage={this.props.changePage} link="Produit du moment">Produit du moment</ExampleComponent> 
-        <ExampleComponent changePage={this.props.changePage} link="Set Shop">Set Shop</ExampleComponent>
-        <ExampleComponent changePage={this.props.changePage} link="Set By Me">Set By Me</ExampleComponent>
+        <ButtonMenu changePage={this.props.changePage} link="accueil">Accueil</ButtonMenu> 
+        <ButtonMenu changePage={this.props.changePage} link="blog">Blog</ButtonMenu>
+        <ButtonMenu changePage={this.props.changePage} link="champagnes">Champagnes</ButtonMenu>
+        <ButtonMenu changePage={this.props.changePage} link="sweets">Sweets</ButtonMenu>
+        <ButtonMenu changePage={this.props.changePage} link="vins">Vins</ButtonMenu>
+        <ButtonMenu changePage={this.props.changePage} link="whisky">Whisky</ButtonMenu>
+        <ButtonMenu changePage={this.props.changePage} link="chillout">Chillout</ButtonMenu>
+        <ButtonMenu changePage={this.props.changePage} link="duLove">DuLove</ButtonMenu>
+        <ButtonMenu changePage={this.props.changePage} link="theOffice">TheOffice</ButtonMenu>
+        <ButtonMenu changePage={this.props.changePage} link="thisIsLaFamilia">ThisIsLaFamilia</ButtonMenu>
+        <ButtonMenu changePage={this.props.changePage} link="entreprises">SweetSet Company</ButtonMenu>
+        <ButtonMenu changePage={this.props.changePage} link="ephemeres">Ephemeres</ButtonMenu>
       </View>
       );
     return (
