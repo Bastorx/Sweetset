@@ -16,13 +16,13 @@ class Paiement extends Component {
         <Text>Payment</Text>
         <Text>Nom titulaire :</Text>
         <Text>Numéro de carte :</Text>
-        <Text>GCV :</Text>
+        <Text>CGV :</Text>
         <Button
-          style={{fontSize: 20, color: 'green'}}
+          style={{fontSize: 20, color: 'black'}}
           styleDisabled={{color: 'red'}}
           onPress={this._handlePress}
         >
-          Validez!
+          Validez
         </Button>
       </View>
     );
