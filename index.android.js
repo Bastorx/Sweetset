@@ -2,12 +2,17 @@
 
 import React, {
   Component,
-  AppRegistry
+  AppRegistry,
+  Navigator
 } from 'react-native';
 
 import styles from './css.js';
+import {Router, Route, Schema, Animations, TabBar} from 'react-native-router-flux';
+
 
 import Menu from './components/Menu';
+
+import Accueil from './pages/Accueil';
 
 import Home from './pages/Home';
 import Blog from './pages/Blog';
@@ -32,63 +37,40 @@ class Sweetset extends Component {
   constructor(props) {
       super(props);
       this.state = {
-          page: "home"
+          page: "accueil"
       };
   }
   render() {
-    return this.renderPage();
+    return (
+      <Router hideNavBar={true}>
+        <Schema name="modal" sceneConfig={Navigator.SceneConfigs.FloatFromBottom}/>
+        <Schema name="default" sceneConfig={Navigator.SceneConfigs.FloatFromRight}/>
+
+        <Route name="accueil" component={Accueil} initial={true} />
+
+        <Route name="blog" component={Blog} wrapRouter={true} hideNavBar={true}/>
+        <Route name="commande" component={Commande} wrapRouter={true} hideNavBar={true}/>
+
+        <Route name="home" component={Home} title="Accueil" wrapRouter={true} hideNavBar={true} />
+
+        <Route name="vins" component={Vins} title="Vins" />
+        <Route name="champagnes" component={Champagnes} title="Champagnes" />
+        <Route name="sweets" component={Sweets} title="Sweets" />
+        
+        <Route name="whisky" component={Whisky} title="Whisky" />
+
+        <Route name="chillout" component={Chillout} title="Chillout" />
+        <Route name="duLove" component={DuLove} title="DuLove" />
+        <Route name="theOffice" component={TheOffice} title="TheOffice" />
+        <Route name="thisIsLaFamilia" component={ThisIsLaFamilia} title="ThisIsLaFamilia" />
+
+        <Route name="entreprises" component={Entreprises} title="Entreprises" />
+        <Route name="ephemeres" component={Ephemeres} title="Ephemeres" />
+
+      </Router>
+
+    );
   }
-  renderPage() {
-    switch(this.state.page) {
-      case "accueil": 
-        return (<Accueil changePage={this.changePage.bind(this)}/>);
-      break;
-      case "home": 
-        return (<Home />);
-      break;
-      case "blog":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Blog /></Menu>);
-      break;
-      case "champagnes":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Champagnes /></Menu>);
-      break;
-      case "sweets":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Sweets /></Menu>);
-      break;
-      case "vins":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Vins /></Menu>);
-      break;
-      case "whisky":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Whisky /></Menu>);
-      break;
-      case "chillout":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Chillout /></Menu>);
-      break;
-      case "duLove":
-        return (<Menu changePage={this.changePage} state={this.state.page}><DuLove /></Menu>);
-      break;
-      case "theOffice":
-        return (<Menu changePage={this.changePage} state={this.state.page}><TheOffice /></Menu>);
-      break;
-      case "thisIsLaFamilia":
-        return (<Menu changePage={this.changePage} state={this.state.page}><ThisIsLaFamilia /></Menu>);
-      break;
-      case "entreprises":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Entreprises /></Menu>);
-      break;
-      case "ephemeres":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Ephemeres /></Menu>);
-      break;
-      default:
-        return (<Accueil changePage={this.changePage}/>);
-      break;
-    }
-  }
-  changePage = (page, e) => {
-    this.setState({
-      page: page
-    });
-  };
 }
 
 AppRegistry.registerComponent('Sweetset', () => Sweetset);
