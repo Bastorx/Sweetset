@@ -15,6 +15,7 @@ import Menu from './components/Menu';
 import Accueil from './pages/Accueil';
 
 import Home from './pages/Home';
+import Accueil from './pages/Accueil';
 import Blog from './pages/Blog';
 import Commande from './pages/Commande';
 import Connexion from './pages/Connexion';
