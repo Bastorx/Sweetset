@@ -8,6 +8,17 @@ module.exports = require('react-native').StyleSheet.create({
 	  "marginTop":150,
 	  "opacity":1
 	},
+	"view": {
+		"flex": 1,
+		"backgroundColor": "#FFFFFF"
+	},
+	"welcome": {
+	  "fontSize": 20,
+	  "textAlign": "center",
+	  "margin": 10,
+	  "marginTop":150,
+	  "opacity":1
+	},
 	"background": {
 		"flex":1,
 		"width":null,

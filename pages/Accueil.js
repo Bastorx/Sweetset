@@ -20,7 +20,7 @@ class Accueil extends Component {
         style={styles.logo}
         source={require('../public/img/logo_min.jpg')}
         />
-      <Button onPress={this.props.changePage.bind(null,"blog")}>
+      <Button onPress={this.props.changePage.bind(null,"home")}>
       <Text>Accéder à l'accueil.</Text>
       </Button>
         <Text style={styles.warning}>L'abus d'alcool est dangereux pour la santé, à consommer avec modération!</Text>
