@@ -1,4 +1,13 @@
 module.exports = require('react-native').StyleSheet.create({
+	"warning": {
+	  "bottom":0,
+	  "fontSize": 10,
+	  "color":"black",
+	  "textAlign": "center",
+	  "margin": 10,
+	  "marginTop":150,
+	  "opacity":1
+	},
 	"view": {
 		"flex": 1,
 		"backgroundColor": "#FFFFFF"
@@ -6,7 +15,14 @@ module.exports = require('react-native').StyleSheet.create({
 	"welcome": {
 	  "fontSize": 20,
 	  "textAlign": "center",
-	  "margin": 10
+	  "margin": 10,
+	  "marginTop":150,
+	  "opacity":1
+	},
+	"background": {
+		"flex":1,
+		"width":null,
+		"height":null
 	},
 	"instructions": {
 	  "textAlign": "center",
@@ -16,8 +32,13 @@ module.exports = require('react-native').StyleSheet.create({
 	"container": {
 		"flex":1,
 		"justifyContent":"center",
-		"alignItems":"center",
-		"backgroundColor":"yellow"
+		"alignItems":"center"
+	},
+	"logo": {
+		"width":300,
+		"height":130,
+		"opacity":0.9,
+		"marginBottom":200
 	},
 	"sidebar": {
 		"backgroundColor":"#000000"
@@ -25,4 +46,3 @@ module.exports = require('react-native').StyleSheet.create({
 	"webView": {
 	}
 });
-
