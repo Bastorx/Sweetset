@@ -43,8 +43,5 @@ module.exports = require('react-native').StyleSheet.create({
 	"sidebar": {
 		"backgroundColor":"blue"
 	}
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 1620d1c399acdffdaa41ddad11959eb0314d8f93
+
