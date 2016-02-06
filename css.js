@@ -1,16 +1,23 @@
 module.exports = require('react-native').StyleSheet.create({
-	"welcome": {
-	  "fontSize": 20,
+	"warning": {
+	  "bottom":0,
+	  "fontSize": 10,
+	  "color":"black",
 	  "textAlign": "center",
 	  "margin": 10,
+	  "marginTop":150,
 	  "opacity":1
+	},
+	"view": {
+		"flex": 1,
+		"backgroundColor": "#FFFFFF"
 	},
 	"welcome": {
 	  "fontSize": 20,
 	  "textAlign": "center",
 	  "margin": 10,
-	  "opacity":1, 
-	  "bottom":0
+	  "marginTop":150,
+	  "opacity":1
 	},
 	"background": {
 		"flex":1,
@@ -28,14 +35,19 @@ module.exports = require('react-native').StyleSheet.create({
 		"alignItems":"center"
 	},
 	"logo": {
-		"flex":1,
-		"top":0,
-		"width":150,
-		"height":100
+		"width":300,
+		"height":130,
+		"opacity":0.9,
+		"marginBottom":200
 	},
 	"button": {
 	    "textAlign": "right",
 	    "color": "#ffffff",
-	    "marginBottom": 7,
-  	}
+	    "marginBottom": 7
+  	},
+	"sidebar": {
+		"backgroundColor":"#000000"
+	},
+	"webView": {
+	}
 });
