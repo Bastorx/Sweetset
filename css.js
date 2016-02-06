@@ -1,4 +1,8 @@
 module.exports = require('react-native').StyleSheet.create({
+	"view": {
+		"flex": 1,
+		"backgroundColor": "#FFFFFF"
+	},
 	"welcome": {
 	  "fontSize": 20,
 	  "textAlign": "center",
