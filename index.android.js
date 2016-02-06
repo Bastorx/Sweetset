@@ -9,6 +9,8 @@ import styles from './css.js';
 
 import Menu from './components/Menu';
 
+import Accueil from './pages/Accueil'
+
 import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Commande from './pages/Commande';
@@ -32,7 +34,7 @@ class Sweetset extends Component {
   constructor(props) {
       super(props);
       this.state = {
-          page: "home"
+          page: "accueil"
       };
   }
   render() {
@@ -44,7 +46,7 @@ class Sweetset extends Component {
         return (<Accueil changePage={this.changePage.bind(this)}/>);
       break;
       case "home": 
-        return (<Home />);
+        return (<Menu changePage={this.changePage} state={this.state.page}><Home changePage={this.changePage}/></Menu>);
       break;
       case "blog":
         return (<Menu changePage={this.changePage} state={this.state.page}><Blog /></Menu>);

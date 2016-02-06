@@ -11,12 +11,38 @@ import React, {
 import styles from '../css';
 import Title from '../components/Title';
 import CircleButton from '../components/CircleButton';
+
 class AccueilImage extends Component {
   render() {
     return (
       <Image source={this.props.src} style={{flex: 1, width: null, height: 150}}>
         {this.props.children}
       </Image>
+    );
+  }
+}
+
+class MomentProduct extends Component {
+  render() {
+    return (
+      <View>
+        <Title bgColor="#B6768F">Produit du moment</Title>
+        <AccueilImage src={require("../public/img/image1.jpeg")}>
+          <ScrollView horizontal={true} style={{marginLeft:15}}>
+            <Image source={{"uri":"https://www.sweetset.paris/372-home_default/mont-redon-chateauneuf-du-pape.jpg"}} style={{marginTop: 20, marginRight: 30, width: 100, height: 100, borderRadius: 1000}}/>
+            <Text style={{color:"#666",marginTop:30,paddingLeft:10,paddingRight:10,width:200}}>
+              {"\t"}Chateau d'eau
+              {"\n"}
+              {"\t"}Année 2002
+              {"\n"}
+              <Text style={{width:200, height:100,fontStyle:"italic",fontSize:10}}>
+                {"\n"}
+                {"\t"}"Voici du vin rouge qui vous soulage d'une cuite."            
+              </Text>
+            </Text>
+          </ScrollView>
+        </AccueilImage>
+      </View>
     );
   }
 }
@@ -30,7 +56,7 @@ class Bottles extends Component {
           <ScrollView horizontal={true} style={{marginLeft: 15}}>
             <CircleButton bgColor="rgba(142, 175, 120, 0.7)" text="VINS"/>
             <CircleButton bgColor="rgba(200, 100, 60, 0.7)" text="CHAMPAGNES"/>
-            <CircleButton bgColor="rgba(175, 100, 15, 0.7)" text="WHISKY"/>
+            <CircleButton changePage={this.props.changePage} link="Whisky" bgColor="rgba(175, 100, 15, 0.7)" text="WHISKY"/>
             <CircleButton bgColor="rgba(200, 125, 150, 0.7)" text="SWEETS"/>
           </ScrollView>
         </AccueilImage>
@@ -77,6 +103,7 @@ class Accueil  extends Component {
   render() {
     return (
       <ScrollView style={styles.view}>
+        <MomentProduct />
         <Bottles />
         <Sets />
         <OneShots />
