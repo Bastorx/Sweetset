@@ -20,10 +20,10 @@ class Paiement extends Component {
   }
   render() {
     return (
-      <Image style={{opacity: 0.5}} source={require('./public/img/image2.jpeg')} style={styles.background}>
+      <Image source={require('./public/img/image2.jpeg')} style={styles.background}>
         <View style={styles.container}>
 
-          <Text style={{color: 'pink', fontWeight: 'bold'}}>Payment{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
+          <Text style={{color: 'black', fontWeight: 'bold'}}>Payment{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
 
           <Text style={{color: 'pink', fontWeight: 'bold'}}>Nom titulaire :</Text>
 
@@ -53,12 +53,14 @@ class Paiement extends Component {
               onChangeText={(text) => this.setState({text})}
               value={this.state.CGV}/>
 
+          <Text style={{color: 'black', fontWeight: 'bold'}}>Agree to the Terms of Service.{"\n"}</Text>
+
           <Button
             style={{fontSize: 20, color: 'black'}}
             styleDisabled={{color: 'red'}}
             onPress={this._handlePress}
           >
-            Validez{"\n"}{"\n"}
+            Commandez{"\n"}{"\n"}
           </Button>
           <Image style={styles.icon} source={require('./public/img/paypal_mc_visa_amex_disc_210x80.gif')} />
         </View> 
