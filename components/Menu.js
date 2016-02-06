@@ -8,9 +8,8 @@ import React, {
 import styles from '../css.js';
 
 import SideMenu from 'react-native-side-menu';
-// var Button = require('react-native-button');
 import Button from 'apsl-react-native-button';
-// import Test_page from './pages/Test_page';
+import CircleButton from '../components/CircleButton';
 
 var ButtonMenu = React.createClass({
   render() {
@@ -30,18 +29,9 @@ class Menu extends Component {
   render() {
     const menu = (
       <View>
-        <ButtonMenu changePage={this.props.changePage} link="accueil">Accueil</ButtonMenu> 
-        <ButtonMenu changePage={this.props.changePage} link="blog">Blog</ButtonMenu>
-        <ButtonMenu changePage={this.props.changePage} link="champagnes">Champagnes</ButtonMenu>
-        <ButtonMenu changePage={this.props.changePage} link="sweets">Sweets</ButtonMenu>
-        <ButtonMenu changePage={this.props.changePage} link="vins">Vins</ButtonMenu>
-        <ButtonMenu changePage={this.props.changePage} link="whisky">Whisky</ButtonMenu>
-        <ButtonMenu changePage={this.props.changePage} link="chillout">Chillout</ButtonMenu>
-        <ButtonMenu changePage={this.props.changePage} link="duLove">DuLove</ButtonMenu>
-        <ButtonMenu changePage={this.props.changePage} link="theOffice">TheOffice</ButtonMenu>
-        <ButtonMenu changePage={this.props.changePage} link="thisIsLaFamilia">ThisIsLaFamilia</ButtonMenu>
-        <ButtonMenu changePage={this.props.changePage} link="entreprises">SweetSet Company</ButtonMenu>
-        <ButtonMenu changePage={this.props.changePage} link="ephemeres">Ephemeres</ButtonMenu>
+        <CircleButton changePage={this.props.changePage} link="Home" text="Accueil" /> 
+      
+        
       </View>
       );
     return (
@@ -53,3 +43,4 @@ class Menu extends Component {
 }
 
 export default Menu;
+
