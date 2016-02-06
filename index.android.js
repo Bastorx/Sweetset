@@ -1,5 +1,4 @@
 'use strict';
-// import Accueil from './accueil.js';
 
 import React, {
   Component,
@@ -10,7 +9,7 @@ import styles from './css.js';
 
 import Menu from './components/Menu';
 
-import Accueil from './pages/Accueil';
+import Home from './pages/Home';
 import Blog from './pages/Blog';
 import Commande from './pages/Commande';
 import Connexion from './pages/Connexion';
@@ -33,7 +32,7 @@ class Sweetset extends Component {
   constructor(props) {
       super(props);
       this.state = {
-          page: "accueil"
+          page: "home"
       };
   }
   render() {
@@ -45,8 +44,8 @@ class Sweetset extends Component {
   }
   renderPage() {
     switch(this.state.page) {
-      case "accueil": 
-        return (<Accueil />);
+      case "home": 
+        return (<Home />);
       break;
       case "blog":
         return (<Blog />);
