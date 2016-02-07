@@ -9,11 +9,11 @@ module.exports = [
     {name: "Meringues Framboise", prix: 8, description: "Etui de 80g", categorie: "sweets", ss_cat: "sucré", img: "https://www.sweetset.paris/227-home_default/la-vie-en-rose-.jpg"},
     {name: "Les Biscuits Roses", prix: 6, description: "Etui de 100g", categorie: "sweets", ss_cat: "sucré", img: "https://www.sweetset.paris/228-home_default/les-biscuits-roses.jpg"},
     {name: "Salé de Reims", prix: 6, description: "Etui de 100g", categorie: "sweets", ss_cat: "salé", img: "https://www.sweetset.paris/333-home_default/grillez-moi.jpg"},
-    {name: "Vernis Essie", prix: 10, description: "Take it outside", categorie: "sweets", ss_cat: "beauté" img: "https://www.sweetset.paris/329-home_default/vernis-essie.jpg"},
-    {name: "Vernis Essie", prix: 10, description: "Truth or flare", categorie: "sweets", ss_cat: "beauté" img: "https://www.sweetset.paris/328-home_default/vernis-essie.jpg"},
-    {name: "Vernis Essie", prix: 10, description: "Vernis magnétique", categorie: "sweets", ss_cat: "beauté" img: "https://www.sweetset.paris/330-home_default/vernis-essie.jpg"},
-    {name: "Vernis Essie", prix: 10, description: "Vernis magnétique", categorie: "sweets", ss_cat: "beauté" img: "https://www.sweetset.paris/331-home_default/vernis-essie.jpg"},
-    {name: "Vernis Essie", prix: 10, description: "Vernis magnétique", categorie: "sweets", ss_cat: "beauté" img: "https://www.sweetset.paris/332-home_default/vernis-essie.jpg"},
+    {name: "Vernis Essie", prix: 10, description: "Take it outside", categorie: "sweets", ss_cat: "beauté", img: "https://www.sweetset.paris/329-home_default/vernis-essie.jpg"},
+    {name: "Vernis Essie", prix: 10, description: "Truth or flare", categorie: "sweets", ss_cat: "beauté", img: "https://www.sweetset.paris/328-home_default/vernis-essie.jpg"},
+    {name: "Vernis Essie", prix: 10, description: "Vernis magnétique", categorie: "sweets", ss_cat: "beauté", img: "https://www.sweetset.paris/330-home_default/vernis-essie.jpg"},
+    {name: "Vernis Essie", prix: 10, description: "Vernis magnétique", categorie: "sweets", ss_cat: "beauté", img: "https://www.sweetset.paris/331-home_default/vernis-essie.jpg"},
+    {name: "Vernis Essie", prix: 10, description: "Vernis magnétique", categorie: "sweets", ss_cat: "beauté", img: "https://www.sweetset.paris/332-home_default/vernis-essie.jpg"},
     {name: "Chardonnay", prix: 8, description: "Comte de Grignan, Année 2014", categorie: "vins", ss_cat: "vins blancs", img: "https://www.sweetset.paris/371-home_default/jurancon.jpg"},
     {name: "Pouilly Fumé", prix: 17, description: "Le Grand Plateau, Année 2013", categorie: "vins", ss_cat: "vins blancs", img: "https://www.sweetset.paris/384-home_default/pouilly-fume.jpg"},
     {name: "Pinot gris", prix: 10, description: "Jux, Année 2013", categorie: "vins", ss_cat: "vins blancs", img: "https://www.sweetset.paris/382-home_default/pinot-gris-sec.jpg"},
@@ -30,5 +30,5 @@ module.exports = [
     {name: "HAPPY BIRTHDAY", prix: 36, description: "1 Nicolas Feuillatte brut réserve + 1 Sweet biscuits roses", categorie: "chillout", img: "https://www.sweetset.paris/344-home_default/happy-birthday-.jpg"},
     {name: "BRUNCHEZ-MOI", prix: 42, description: "1 Pommery brut Silve + 1 jus d'orange", categorie: "chillout", img: "https://www.sweetset.paris/347-home_default/brunchez-moi-.jpg"},
     {name: "PROMIS JE LE FERAI DEMAIN", prix: 21, description:  "1 Sancerre blanc + 1 sweet salé de Reims", categorie: "chillout", img: "https://www.sweetset.paris/359-home_default/promis-je-le-ferai-demain-.jpg"},
-    {name: "SUR LES QUAIS DE PANAME", prix: 18, description: "1 rosé + 1 sweet salé de Reims", categorie: "chillout", img: "https://www.sweetset.paris/364-home_default/sur-les-quais-de-paris-.jpg"},
+    {name: "SUR LES QUAIS DE PANAME", prix: 18, description: "1 rosé + 1 sweet salé de Reims", categorie: "chillout", img: "https://www.sweetset.paris/364-home_default/sur-les-quais-de-paris-.jpg"}
 ];

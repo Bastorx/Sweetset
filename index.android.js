@@ -4,7 +4,8 @@ import React, {
   Component,
   AppRegistry,
   Navigator,
-  Image
+  Image,
+  Text
 } from 'react-native';
 
 import styles from './css.js';
@@ -13,28 +14,20 @@ import {Router, Route, Schema, Animations, TabBar} from 'react-native-router-flu
 
 import Menu from './components/Menu';
 
-import Accueil from './pages/Accueil'
-
 import Home from './pages/Home';
 import Accueil from './pages/Accueil';
 import Blog from './pages/Blog';
 import Commande from './pages/Commande';
 import Connexion from './pages/Connexion';
 
-import Champagnes from './pages/SET_BY_ME/Champagnes';
-import Sweets from './pages/SET_BY_ME/Sweets';
-import Vins from './pages/SET_BY_ME/Vins';
-import Whisky from './pages/SET_BY_ME/Whisky';
-
-import Chillout from './pages/SET_BY_SET/Chillout';
-import DuLove from './pages/SET_BY_SET/DuLove';
-import TheOffice from './pages/SET_BY_SET/TheOffice';
-import ThisIsLaFamilia from './pages/SET_BY_SET/ThisIsLaFamilia';
-
-import Entreprises from './pages/SET_ONE_SHOT/Entreprises';
-import Ephemeres from './pages/SET_ONE_SHOT/Ephemeres';
+import ArticlePage from './pages/ArticlePage.js';
 
 import Paiement from './pages/paiement';
+
+function ucfirst(str) {
+    var firstLetter = str.slice(0,1);
+    return firstLetter.toUpperCase() + str.substring(1);
+}
 
 class Sweetset extends Component {
   constructor(props) {
@@ -42,7 +35,7 @@ class Sweetset extends Component {
       this.state = {
           user: {},
           command: [],
-          product: require('./constants/products')
+          products: require('./constants/products')
       };
   }
   render() {
@@ -58,20 +51,13 @@ class Sweetset extends Component {
             <Route name="paiement" component={Paiement} wrapRouter={true} hideNavBar={true}/>
 
             <Route name="home" component={Home} title="Accueil" wrapRouter={true} hideNavBar={true} />
-
-            <Route name="vins" component={Vins} title="Vins" />
-            <Route name="champagnes" component={Champagnes} title="Champagnes" />
-            <Route name="sweets" component={Sweets} title="Sweets" />
-            
-            <Route name="whisky" component={Whisky} title="Whisky" />
-
-            <Route name="chillout" component={Chillout} title="Chillout" />
-            <Route name="duLove" component={DuLove} title="DuLove" />
-            <Route name="theOffice" component={TheOffice} title="TheOffice" />
-            <Route name="thisIsLaFamilia" component={ThisIsLaFamilia} title="ThisIsLaFamilia" />
-
-            <Route name="entreprises" component={Entreprises} title="Entreprises" />
-            <Route name="ephemeres" component={Ephemeres} title="Ephemeres" />
+            {
+              _.map(_.uniq(_.map(this.state.products, 'categorie')), function(cat) {
+                return (
+                  <Route name={cat} component={ArticlePage} products={this.state.products} categorie={ucfirst(cat)} title={ucfirst(cat)} />
+                );
+              }.bind(this))
+            }
           </Router>
         </Menu>
     );
