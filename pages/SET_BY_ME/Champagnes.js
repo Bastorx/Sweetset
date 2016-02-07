@@ -15,9 +15,8 @@ import styles from '../../css';
 class Champagnes extends Component {
   render() {
     return (
-	<View>
-    <Title bgColor="rgba(175, 100, 15, 0.7)">Champagnes</Title>
-	  <ScrollView style={styles.view}>
+<ScrollView style={styles.view}>
+   	<Title bgColor="rgba(175, 100, 15, 0.7)">Champagnes</Title>
 	  	<Article 
 	  	src={{uri:"https://www.sweetset.paris/285-home_default/nicolas-feuillatte.jpg"}}
 	  	p_name="Nicolas Feuillatte"
@@ -61,7 +60,6 @@ class Champagnes extends Component {
 	  	desc="Champagne brut"
 	  	/>
       </ScrollView>
-      </View>
     );
   }
 }

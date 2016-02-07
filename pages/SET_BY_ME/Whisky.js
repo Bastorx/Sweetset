@@ -17,9 +17,8 @@ import styles from '../../css';
 class Whisky extends Component {
   render() {
     return (
-    <View>
+	<ScrollView style={styles.view}>
     <Title bgColor="rgba(175, 100, 15, 0.7)">Whisky</Title>
-	  <ScrollView style={styles.view}>
 	  	<Article 
 	  	src={{uri:"https://www.sweetset.paris/276-home_default/whisky-japonais-nikka-.jpg"}}
 	  	p_name="Nikka 10 ans"
@@ -45,7 +44,6 @@ class Whisky extends Component {
 	  	desc="Whisky Breton"
 	  	/>
       </ScrollView>
-      </View>
     );
   }
 }
