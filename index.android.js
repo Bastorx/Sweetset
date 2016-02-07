@@ -74,6 +74,5 @@ class Sweetset extends Component {
   }
 }
 
-
 AppRegistry.registerComponent('Sweetset', () => Sweetset);
 
