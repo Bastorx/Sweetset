@@ -8,8 +8,8 @@ import React, {
   Image
 } from 'react-native';
 
-import styles from '../css';
-import Title from '../components/Title';
+import styles from '../../css';
+import Title from '../../components/Title';
 
 class Entreprises extends Component {
   render() {

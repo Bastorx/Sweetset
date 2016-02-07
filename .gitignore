@@ -32,8 +32,3 @@ local.properties
 #
 node_modules/
 npm-debug.log
-.env
-android
-ios
-public/components
-public/components/**
