@@ -3,11 +3,13 @@
 import React, {
   Component,
   ScrollView,
+  View,
   Image,
 } from 'react-native';
 
 import IFrame from '../../components/IFrame';
 import Article from '../../components/Article';
+import Title from '../../components/Title'
 import styles from '../../css';
 
 
@@ -15,6 +17,8 @@ import styles from '../../css';
 class Whisky extends Component {
   render() {
     return (
+    <View>
+    <Title bgColor="rgba(175, 100, 15, 0.7)">Whisky</Title>
 	  <ScrollView style={styles.view}>
 	  	<Article 
 	  	src={{uri:"https://www.sweetset.paris/276-home_default/whisky-japonais-nikka-.jpg"}}
@@ -41,6 +45,7 @@ class Whisky extends Component {
 	  	desc="Whisky Breton"
 	  	/>
       </ScrollView>
+      </View>
     );
   }
 }

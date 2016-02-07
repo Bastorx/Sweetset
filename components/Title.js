@@ -11,7 +11,7 @@ class Title extends Component {
     const fontColor = this.props.color || "white";
     return (
       <View style={{"backgroundColor": this.props.bgColor}}>
-        <Text style={{marginLeft: 15, marginTop: 5, marginBottom: 5,color: fontColor, fontSize: 20, fontFamily: "JOURNAL"}}>
+        <Text style={{marginLeft: 15, marginTop: 5, marginBottom: 5,color: fontColor, fontSize: 20, fontFamily: "JOURNAL", textAlign: "center"}}>
           {this.props.children}
         </Text>
       </View>
