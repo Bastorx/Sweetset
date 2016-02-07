@@ -8,7 +8,7 @@ import React, {
   Text
 } from 'react-native';
 import Button from 'react-native-button';
-import styles from './css.js';
+import styles from '../css.js';
 
 
 class login extends Component {
@@ -20,31 +20,37 @@ class login extends Component {
   }
   render() {
     return (
-      <Image source={require('./public/img/image1.jpeg')} style={styles.background}>
-        <View style={styles.container}>
-
-          <Text style={{color: 'black', fontWeight: 'bold'}}>Sign in{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
-
-            <TextInput
-              style={{height: 40, width: 150, borderColor: '#0000', borderWidth: 1}}
+      <Image source={require('../public/img/2.jpg')} style={styles.background}>
+        <View style={styles.containerlogin}>
+        <View style={{borderBottomWidth: 1, borderBottomColor: 'darkgrey', width: 200, justifyContent:"center", alignItems:"center"}}>
+          <Text style={{fontSize: 20, color: 'white', fontWeight: 'bold'}}>Se connecter</Text>
+        </View>
+          <View style={{marginTop: 30}}/>          
+          <TextInput
+              style={{height: 40, width: 150, borderColor: '#FFFFFF', borderWidth: 1, backgroundColor: 'rgba(250, 250, 250, 0.2)'}}
+              placeholder={"Nom d'Utilisateur"}
+              placeholderTextColor={'rgba(250, 250, 250, 0.3)'}
               onChangeText={(text) => this.setState({text})}
-              value={this.state.Identifiant}/>
-
-            <TextInput
-              style={{height: 40, width: 150, borderColor: '#0000', borderWidth: 1}}
+              value={this.state.Identifiant} 
+              />
+        <View style={{marginTop: 20}}/>          
+          <TextInput
+              style={{height: 40, width: 150, borderColor: '#FFFFFF', borderWidth: 1, backgroundColor: 'rgba(250, 250, 250, 0.2)'}}
+              placeholder={"Mot de passe"}
+              placeholderTextColor={'rgba(250, 250, 250, 0.3)'}
+              secureTextEntry={true}
               onChangeText={(text) => this.setState({text})}
-              value={this.state.motdepasse}/>
-
-          <Text style={{color: 'black', fontWeight: 'bold'}}>Agree to the Terms of Service.{"\n"}</Text>
-
+              value={this.state.motdepasse}
+              />
+        <View style={{marginTop: 30, borderBottomWidth: 1, borderBottomColor: 'darkgrey', width: 200, justifyContent:"center", alignItems:"center"}}/>          
           <Button
             style={{fontSize: 20, color: 'black'}}
             styleDisabled={{color: 'red'}}
             onPress={this._handlePress}
           >
-            Connection{"\n"}{"\n"}
+            Connexion
           </Button>
-        </View> 
+        </View>        
     </Image>
     );
   }

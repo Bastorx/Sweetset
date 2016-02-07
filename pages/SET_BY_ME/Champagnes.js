@@ -17,7 +17,6 @@ class Champagnes extends Component {
     return (
 <ScrollView style={styles.view}>
    	<Title bgColor="rgba(175, 100, 15, 0.7)">Champagnes</Title>
-	  	<Article 
 	  	src={{uri:"https://www.sweetset.paris/285-home_default/nicolas-feuillatte.jpg"}}
 	  	p_name="Nicolas Feuillatte"
 	  	prix="30,00€"

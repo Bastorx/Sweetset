@@ -21,7 +21,6 @@ import Home from './pages/Home';
 import Accueil from './pages/Accueil';
 import Blog from './pages/Blog';
 import Commande from './pages/Commande';
-import Connexion from './pages/Connexion';
 
 import Champagnes from './pages/SET_BY_ME/Champagnes';
 import Sweets from './pages/SET_BY_ME/Sweets';
@@ -37,6 +36,8 @@ import Entreprises from './pages/SET_ONE_SHOT/Entreprises';
 import Ephemeres from './pages/SET_ONE_SHOT/Ephemeres';
 
 import Paiement from './pages/paiement';
+import Login from './pages/login';
+import Connexion from './pages/Connexion';
 
 class Sweetset extends Component {
   constructor(props) {
@@ -53,11 +54,14 @@ class Sweetset extends Component {
           <Router hideNavBar={true}>
             <Schema name="default"/>
 
-            <Route name="accueil" component={Accueil} initial={true} />
+            <Route name="accueil" component={Accueil}  />
 
             <Route name="blog" component={Blog} wrapRouter={true} hideNavBar={true}/>
             <Route name="commande" component={Commande} wrapRouter={true} hideNavBar={true}/>
             <Route name="paiement" component={Paiement} wrapRouter={true} hideNavBar={true}/>
+            
+            <Route name="login" component={Login} wrapRouter={true} hideNavBar={true} initial={true}/>
+            <Route name="connexion" component={Connexion} wrapRouter={true} hideNavBar={true}/>
 
             <Route name="home" component={Home} title="Accueil" wrapRouter={true} hideNavBar={true} />
 

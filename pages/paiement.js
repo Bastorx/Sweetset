@@ -27,7 +27,7 @@ class Paiement extends Component {
       <Image source={require('../public/img/image2.jpeg')} style={styles.background}>
         <View style={styles.container}>
 
-          <Text style={{color: 'black', fontWeight: 'bold'}}>Payment{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
+          <Text style={{color: 'black', fontWeight: 'bold', fontSize: 16}}>Payment{"\n"}{"\n"}{"\n"}{"\n"}{"\n"}</Text>
 
           <Text style={{color: 'pink', fontWeight: 'bold'}}>Nom titulaire :</Text>
 
@@ -74,4 +74,3 @@ class Paiement extends Component {
 }
 
 export default Paiement;
-
