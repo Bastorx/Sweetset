@@ -2,14 +2,19 @@
 
 import React, {
   Component,
-  AppRegistry
+  AppRegistry,
+  Navigator,
+  Image
 } from 'react-native';
 
 import styles from './css.js';
 
+import {Router, Route, Schema, Animations, TabBar} from 'react-native-router-flux';
+
 import Menu from './components/Menu';
 
 import Home from './pages/Home';
+import Accueil from './pages/Accueil';
 import Blog from './pages/Blog';
 import Commande from './pages/Commande';
 import Connexion from './pages/Connexion';
@@ -27,72 +32,46 @@ import ThisIsLaFamilia from './pages/SET_BY_SET/ThisIsLaFamilia';
 import Entreprises from './pages/SET_ONE_SHOT/Entreprises';
 import Ephemeres from './pages/SET_ONE_SHOT/Ephemeres';
 
-
-import Paiement from './paiement';
+import Paiement from './pages/paiement';
 
 class Sweetset extends Component {
   constructor(props) {
       super(props);
       this.state = {
-          page: "home"
+          page: "accueil"
       };
   }
   render() {
-    return this.renderPage();
+    return (
+      <Menu>
+          <Router hideNavBar={true}>
+            <Schema name="default"/>
+
+            {/*<Route name="accueil" component={Accueil} initial={true} />*/}
+
+            <Route name="blog" component={Blog} wrapRouter={true} hideNavBar={true}/>
+            <Route name="commande" component={Commande} wrapRouter={true} hideNavBar={true}/>
+            <Route name="paiement" component={Paiement} wrapRouter={true} hideNavBar={true} initial={true}/>
+
+            <Route name="home" component={Home} title="Accueil" wrapRouter={true} hideNavBar={true} />
+
+            <Route name="vins" component={Vins} title="Vins" />
+            <Route name="champagnes" component={Champagnes} title="Champagnes" />
+            <Route name="sweets" component={Sweets} title="Sweets" />
+            
+            <Route name="whisky" component={Whisky} title="Whisky" />
+
+            <Route name="chillout" component={Chillout} title="Chillout" />
+            <Route name="duLove" component={DuLove} title="DuLove" />
+            <Route name="theOffice" component={TheOffice} title="TheOffice" />
+            <Route name="thisIsLaFamilia" component={ThisIsLaFamilia} title="ThisIsLaFamilia" />
+
+            <Route name="entreprises" component={Entreprises} title="Entreprises" />
+            <Route name="ephemeres" component={Ephemeres} title="Ephemeres" />
+          </Router>
+        </Menu>
+    );
   }
-  renderPage() {
-    switch(this.state.page) {
-      case "accueil": 
-        return (<Accueil changePage={this.changePage.bind(this)}/>);
-      break;
-      case "home": 
-        return (<Home />);
-      break;
-      case "blog":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Blog /></Menu>);
-      break;
-      case "champagnes":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Champagnes /></Menu>);
-      break;
-      case "sweets":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Sweets /></Menu>);
-      break;
-      case "vins":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Vins /></Menu>);
-      break;
-      case "whisky":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Whisky /></Menu>);
-      break;
-      case "chillout":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Chillout /></Menu>);
-      break;
-      case "duLove":
-        return (<Menu changePage={this.changePage} state={this.state.page}><DuLove /></Menu>);
-      break;
-      case "theOffice":
-        return (<Menu changePage={this.changePage} state={this.state.page}><TheOffice /></Menu>);
-      break;
-      case "thisIsLaFamilia":
-        return (<Menu changePage={this.changePage} state={this.state.page}><ThisIsLaFamilia /></Menu>);
-      break;
-      case "entreprises":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Entreprises /></Menu>);
-      break;
-      case "ephemeres":
-        return (<Menu changePage={this.changePage} state={this.state.page}><Ephemeres /></Menu>);
-      break;
-      default:
-        return (<Accueil changePage={this.changePage}/>);
-      break;
-      case "Paiement": 
-        return (<Menu changePage={this.changePage} state={this.state.page}><Paiement /></Menu>);
-    }
-  }
-  changePage = (page, e) => {
-    this.setState({
-      page: page
-    });
-  };
 }
 
 

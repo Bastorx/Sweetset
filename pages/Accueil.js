@@ -6,10 +6,13 @@ import React, {
   Image,
   View,
   Text,
+  TouchableHighlight
 } from 'react-native';
 import Button from 'react-native-button';
 import styles from '../css.js';
 import IFrame from '../components/IFrame';
+
+import {Actions} from 'react-native-router-flux';
 
 class Accueil extends Component {
   render() {
@@ -20,9 +23,11 @@ class Accueil extends Component {
         style={styles.logo}
         source={require('../public/img/logo_min.jpg')}
         />
-      <Button onPress={this.props.changePage.bind(null,"home")}>
-      <Text>Accéder à l'accueil.</Text>
-      </Button>
+      <TouchableHighlight onPress={Actions.home}>
+        <View style={{backgroundColor: "rgba(220, 150, 150, 0.6)"}}>
+          <Text style={{margin: 5, fontSize: 15, fontWeight: "400"}}>Accéder à l'accueil.</Text>
+        </View>
+      </TouchableHighlight>
         <Text style={styles.warning}>L'abus d'alcool est dangereux pour la santé, à consommer avec modération!</Text>
       </View>
       </Image>
