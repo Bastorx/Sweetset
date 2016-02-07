@@ -24,7 +24,7 @@ class Accueil extends Component {
         source={require('../public/img/logo_min.png')}
         />
       <TouchableHighlight onPress={Actions.home}>
-        <View style={{backgroundColor: "rgba(220, 150, 150, 0.4)", borderRadius: 1000}}>
+        <View style={{backgroundColor: "rgba(247, 230, 255, 0.3)", borderRadius: 1000}}>
           <Text style={{margin: 5, fontSize: 15, fontWeight: "400"}}>Accéder à l'accueil.</Text>
         </View>
       </TouchableHighlight>

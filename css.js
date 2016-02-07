@@ -48,6 +48,11 @@ module.exports = require('react-native').StyleSheet.create({
   	},
 	"sidebar": {
 		"backgroundColor":"blue"
+	},
+	"containerlogin": {
+		"marginTop": 110,
+		"justifyContent":"center",
+		"alignItems":"center"
 	}
 });
 
