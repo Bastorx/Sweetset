@@ -4,62 +4,42 @@ import React, {
   Component,
   View,
   ScrollView,
-  Text
+  Text,
+  Image
 } from 'react-native';
 import styles from '../css.js';
 
 import SideMenu from 'react-native-side-menu';
-import Button from 'apsl-react-native-button';
-import SquareButton from '../components/SquareButton';
+import SquareButton from './SquareButton';
 
-var ButtonMenu = React.createClass({
-  render() {
-    return (
-      <Button
-        style={{fontSize: 16, color: 'red', textAlign:'center'}}
-        styleDisabled={{color: 'red'}}
-        onPress={this.props.changePage.bind(null, this.props.link || "")}
-      >
-      {this.props.children}
-      </Button>
-    );
-  }
-});
-
-class MenuBack extends Component {
-  render() {
-    return (
-      <Image source={this.props.src} style={{flex: 1, width: null}}>
-        {this.props.children}
-      </Image>
-    );
-  }
-}
+import {Actions} from 'react-native-router-flux';
 
 class Menu extends Component {
   render() {
     const menu = (
       <View>
         <ScrollView>
-        <SquareButton changePage={this.props.changePage} link="home" text="Accueil" /> 
-        <SquareButton changePage={this.props.changePage} link="blog" text="Blog" /> 
-        <SquareButton changePage={this.props.changePage} link="champagne" text="Champagnes" /> 
-        <SquareButton changePage={this.props.changePage} link="sweets" text="Sweets" /> 
-        <SquareButton changePage={this.props.changePage} link="vins" text="Vins" /> 
-        <SquareButton changePage={this.props.changePage} link="whisky" text="Whisky" /> 
-        <SquareButton changePage={this.props.changePage} link="chillout" text="Chillout" /> 
-        <SquareButton changePage={this.props.changePage} link="duLove" text="DuLove" /> 
-        <SquareButton changePage={this.props.changePage} link="theOffice" text="TheOffice" /> 
-        <SquareButton changePage={this.props.changePage} link="thisIsLaFamilia" text="ThisIsLaFamilia" /> 
-        <SquareButton changePage={this.props.changePage} link="entreprises" text="Entreprises" /> 
-        <SquareButton changePage={this.props.changePage} link="ephemeres" text="Ephemeres" /> 
+          <SquareButton onPress={() => Actions.home} text="Accueil" /> 
+          <SquareButton onPress={() => Actions.blog()} text="Blog" /> 
+          <SquareButton onPress={() => Actions.champagne} text="Champagnes" /> 
+          <SquareButton onPress={() => Actions.sweets} text="Sweets" /> 
+          <SquareButton onPress={() => Actions.vins} text="Vins" /> 
+          <SquareButton onPress={() => Actions.whisky} text="Whisky" /> 
+          <SquareButton onPress={() => Actions.chillout} text="Chillout" /> 
+          <SquareButton onPress={() => Actions.duLove} text="DuLove" /> 
+          <SquareButton onPress={() => Actions.theOffice} text="TheOffice" /> 
+          <SquareButton onPress={() => Actions.thisIsLaFamilia} text="ThisIsLaFamilia" /> 
+          <SquareButton onPress={() => Actions.entreprises} text="Entreprises" /> 
+          <SquareButton onPress={() => Actions.ephemeres} text="Ephemeres" /> 
         </ScrollView>
       </View>
       );
     return (
-      <SideMenu menu={menu} openMenuOffset={150} scrollsToTop={true}>
-          {this.props.children}
-      </SideMenu>
+      <Image source={require('../public/img/01.jpg')} style={styles.background}>
+        <SideMenu menu={menu} openMenuOffset={150} scrollsToTop={true}>
+            {this.props.children}
+        </SideMenu>
+      </Image>
     );
   }
 }
