@@ -13,6 +13,8 @@ import {Router, Route, Schema, Animations, TabBar} from 'react-native-router-flu
 
 import Menu from './components/Menu';
 
+import Footer from './components/Footer';
+
 import Accueil from './pages/Accueil'
 
 import Home from './pages/Home';

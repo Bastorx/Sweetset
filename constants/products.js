@@ -31,4 +31,11 @@ module.exports = [
     {name: "BRUNCHEZ-MOI", prix: 42, description: "1 Pommery brut Silve + 1 jus d'orange", categorie: "chillout", img: "https://www.sweetset.paris/347-home_default/brunchez-moi-.jpg"},
     {name: "PROMIS JE LE FERAI DEMAIN", prix: 21, description:  "1 Sancerre blanc + 1 sweet salé de Reims", categorie: "chillout", img: "https://www.sweetset.paris/359-home_default/promis-je-le-ferai-demain-.jpg"},
     {name: "SUR LES QUAIS DE PANAME", prix: 18, description: "1 rosé + 1 sweet salé de Reims", categorie: "chillout", img: "https://www.sweetset.paris/364-home_default/sur-les-quais-de-paris-.jpg"},
+    {name: "VENDANGES TARDIVES", prix: 30, description: "Gewurztraminer, Vendanges tardives 2012", categorie: "ephemeres", img: "https://www.sweetset.paris/394-home_default/cotes-de-provence.jpg"},
+    {name: "TORRA DI SERENA", prix: 15, description: "Torra Di Serena", categorie: "ephemeres", img: "https://www.sweetset.paris/277-home_default/la-closerie-du-pic.jpg"},
+    {name: "PESSAC LEOGNAN", prix: 31, description: "Château de cruzeau, Année 2007", categorie: "ephemeres", img: "https://www.sweetset.paris/381-home_default/pessac-leognan.jpg"},
+    {name: "SAINT EMILION", prix: 31, description: "Château La Diligente, Année 2011", categorie: "ephemeres", img: "https://www.sweetset.paris/378-home_default/saint-emilion.jpg"},
+    {name: "TOTE BAG ROCK'N ROSES", prix: 5, description: "Sac en tissu", categorie: "ephemeres", img: "https://www.sweetset.paris/391-home_default/la-closerie-du-pic.jpg"},
+    {name: "TOTE BAG POUR LES RÊVEUSES", prix: 5, description: "Sac en tissu", categorie: "ephemeres", img: "https://www.sweetset.paris/392-home_default/la-closerie-du-pic.jpg"},
+
 ];
