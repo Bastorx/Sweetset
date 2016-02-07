@@ -11,6 +11,7 @@ import React, {
 import styles from '../css';
 import Title from '../components/Title';
 import CircleButton from '../components/CircleButton';
+
 import Footer from '../components/Footer';
 
 import {Actions} from 'react-native-router-flux';
@@ -21,6 +22,31 @@ class AccueilImage extends Component {
       <Image source={this.props.src} style={{flex: 1, width: null, height: 150}}>
         {this.props.children}
       </Image>
+    );
+  }
+}
+
+class MomentProduct extends Component {
+  render() {
+    return (
+      <View>
+        <Title bgColor="#B6768F">Produit du moment</Title>
+        <AccueilImage src={require("../public/img/image1.jpeg")}>
+          <ScrollView horizontal={true} style={{marginLeft:15}}>
+            <Image source={{"uri":"https://www.sweetset.paris/372-home_default/mont-redon-chateauneuf-du-pape.jpg"}} style={{marginTop: 20, marginRight: 30, width: 100, height: 100, borderRadius: 1000}}/>
+            <Text style={{color:"#666",marginTop:30,paddingLeft:10,paddingRight:10,width:200}}>
+              {"\t"}Chateau d'eau
+              {"\n"}
+              {"\t"}Année 2002
+              {"\n"}
+              <Text style={{width:200, height:100,fontStyle:"italic",fontSize:10}}>
+                {"\n"}
+                {"\t"}"Voici du vin rouge qui vous soulage d'une cuite."            
+              </Text>
+            </Text>
+          </ScrollView>
+        </AccueilImage>
+      </View>
     );
   }
 }
@@ -81,6 +107,7 @@ class Accueil  extends Component {
   render() {
     return (
       <ScrollView style={styles.view}>
+        <MomentProduct />
         <Bottles />
         <Sets />
         <OneShots />
