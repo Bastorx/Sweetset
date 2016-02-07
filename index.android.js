@@ -3,16 +3,15 @@
 import React, {
   Component,
   AppRegistry,
-  Navigator
+  Navigator,
+  Image
 } from 'react-native';
 
 import styles from './css.js';
+
 import {Router, Route, Schema, Animations, TabBar} from 'react-native-router-flux';
 
-
 import Menu from './components/Menu';
-
-import Accueil from './pages/Accueil';
 
 import Home from './pages/Home';
 import Accueil from './pages/Accueil';
@@ -33,7 +32,6 @@ import ThisIsLaFamilia from './pages/SET_BY_SET/ThisIsLaFamilia';
 import Entreprises from './pages/SET_ONE_SHOT/Entreprises';
 import Ephemeres from './pages/SET_ONE_SHOT/Ephemeres';
 
-
 class Sweetset extends Component {
   constructor(props) {
       super(props);
@@ -43,33 +41,32 @@ class Sweetset extends Component {
   }
   render() {
     return (
-      <Router hideNavBar={true}>
-        <Schema name="modal" sceneConfig={Navigator.SceneConfigs.FloatFromBottom}/>
-        <Schema name="default" sceneConfig={Navigator.SceneConfigs.FloatFromRight}/>
+      <Menu>
+          <Router hideNavBar={true}>
+            <Schema name="default"/>
 
-        <Route name="accueil" component={Accueil} initial={true} />
+            <Route name="accueil" component={Accueil} initial={true} />
 
-        <Route name="blog" component={Blog} wrapRouter={true} hideNavBar={true}/>
-        <Route name="commande" component={Commande} wrapRouter={true} hideNavBar={true}/>
+            <Route name="blog" component={Blog} wrapRouter={true} hideNavBar={true}/>
+            <Route name="commande" component={Commande} wrapRouter={true} hideNavBar={true}/>
 
-        <Route name="home" component={Home} title="Accueil" wrapRouter={true} hideNavBar={true} />
+            <Route name="home" component={Home} title="Accueil" wrapRouter={true} hideNavBar={true} />
 
-        <Route name="vins" component={Vins} title="Vins" />
-        <Route name="champagnes" component={Champagnes} title="Champagnes" />
-        <Route name="sweets" component={Sweets} title="Sweets" />
-        
-        <Route name="whisky" component={Whisky} title="Whisky" />
+            <Route name="vins" component={Vins} title="Vins" />
+            <Route name="champagnes" component={Champagnes} title="Champagnes" />
+            <Route name="sweets" component={Sweets} title="Sweets" />
+            
+            <Route name="whisky" component={Whisky} title="Whisky" />
 
-        <Route name="chillout" component={Chillout} title="Chillout" />
-        <Route name="duLove" component={DuLove} title="DuLove" />
-        <Route name="theOffice" component={TheOffice} title="TheOffice" />
-        <Route name="thisIsLaFamilia" component={ThisIsLaFamilia} title="ThisIsLaFamilia" />
+            <Route name="chillout" component={Chillout} title="Chillout" />
+            <Route name="duLove" component={DuLove} title="DuLove" />
+            <Route name="theOffice" component={TheOffice} title="TheOffice" />
+            <Route name="thisIsLaFamilia" component={ThisIsLaFamilia} title="ThisIsLaFamilia" />
 
-        <Route name="entreprises" component={Entreprises} title="Entreprises" />
-        <Route name="ephemeres" component={Ephemeres} title="Ephemeres" />
-
-      </Router>
-
+            <Route name="entreprises" component={Entreprises} title="Entreprises" />
+            <Route name="ephemeres" component={Ephemeres} title="Ephemeres" />
+          </Router>
+        </Menu>
     );
   }
 }
