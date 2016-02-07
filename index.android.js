@@ -13,6 +13,8 @@ import {Router, Route, Schema, Animations, TabBar} from 'react-native-router-flu
 
 import Menu from './components/Menu';
 
+import Accueil from './pages/Accueil'
+
 import Home from './pages/Home';
 import Accueil from './pages/Accueil';
 import Blog from './pages/Blog';
@@ -40,7 +42,7 @@ class Sweetset extends Component {
       this.state = {
           user: {},
           command: [],
-          product: []
+          product: require('./constants/products')
       };
   }
   render() {
