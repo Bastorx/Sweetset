@@ -11,7 +11,7 @@ class Vins extends Component {
     return (
         <IFrame
           ref="vins"
-          url={"https://www.sweetset.paris/blog"}
+          url={"https://www.sweetset.paris/19-vins"}
         />
     );
   }

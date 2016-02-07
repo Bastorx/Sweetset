@@ -11,7 +11,7 @@ class Sweets extends Component {
     return (
         <IFrame
           ref="sweets"
-          url={"https://www.sweetset.paris/blog"}
+          url={"https://www.sweetset.paris/23-sweets"}
         />
     );
   }
