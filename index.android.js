@@ -53,7 +53,7 @@ class Sweetset extends Component {
           <Router hideNavBar={true}>
             <Schema name="default"/>
 
-            <Route name="accueil" component={Accueil} initial={true}/>
+            <Route name="accueil" component={Accueil} initial={true} />
 
             <Route name="blog" component={Blog} wrapRouter={true} hideNavBar={true}/>
             <Route name="commande" component={Commande} wrapRouter={true} hideNavBar={true}/>
