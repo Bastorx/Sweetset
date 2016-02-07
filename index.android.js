@@ -15,8 +15,6 @@ import Menu from './components/Menu';
 
 import Footer from './components/Footer';
 
-import Accueil from './pages/Accueil'
-
 import Home from './pages/Home';
 import Accueil from './pages/Accueil';
 import Blog from './pages/Blog';
@@ -54,13 +52,13 @@ class Sweetset extends Component {
           <Router hideNavBar={true}>
             <Schema name="default"/>
 
-            <Route name="accueil" component={Accueil}  />
+            <Route name="accueil" component={Accueil} initial={true} />
 
             <Route name="blog" component={Blog} wrapRouter={true} hideNavBar={true}/>
             <Route name="commande" component={Commande} wrapRouter={true} hideNavBar={true}/>
             <Route name="paiement" component={Paiement} wrapRouter={true} hideNavBar={true}/>
             
-            <Route name="login" component={Login} wrapRouter={true} hideNavBar={true} initial={true}/>
+            <Route name="login" component={Login} wrapRouter={true} hideNavBar={true} />
             <Route name="connexion" component={Connexion} wrapRouter={true} hideNavBar={true}/>
 
             <Route name="home" component={Home} title="Accueil" wrapRouter={true} hideNavBar={true} />
