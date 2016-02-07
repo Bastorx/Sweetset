@@ -40,6 +40,11 @@ module.exports = require('react-native').StyleSheet.create({
 		"opacity":0.9,
 		"marginBottom":200
 	},
+	"button": {
+	    "textAlign": "right",
+	    "color": "#ffffff",
+	    "marginBottom": 7
+  	},
 	"sidebar": {
 		"backgroundColor":"blue"
 	}

@@ -32,6 +32,8 @@ import ThisIsLaFamilia from './pages/SET_BY_SET/ThisIsLaFamilia';
 import Entreprises from './pages/SET_ONE_SHOT/Entreprises';
 import Ephemeres from './pages/SET_ONE_SHOT/Ephemeres';
 
+import Paiement from './pages/paiement';
+
 class Sweetset extends Component {
   constructor(props) {
       super(props);
@@ -45,10 +47,11 @@ class Sweetset extends Component {
           <Router hideNavBar={true}>
             <Schema name="default"/>
 
-            <Route name="accueil" component={Accueil} initial={true} />
+            {/*<Route name="accueil" component={Accueil} initial={true} />*/}
 
             <Route name="blog" component={Blog} wrapRouter={true} hideNavBar={true}/>
             <Route name="commande" component={Commande} wrapRouter={true} hideNavBar={true}/>
+            <Route name="paiement" component={Paiement} wrapRouter={true} hideNavBar={true} initial={true}/>
 
             <Route name="home" component={Home} title="Accueil" wrapRouter={true} hideNavBar={true} />
 
@@ -71,4 +74,6 @@ class Sweetset extends Component {
   }
 }
 
+
 AppRegistry.registerComponent('Sweetset', () => Sweetset);
+
