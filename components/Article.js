@@ -5,16 +5,22 @@ import React, {
   View,
   Image,
   ScrollView,
-  Text
+  Text,
+  TouchableHighlight
 } from 'react-native';
 
 import styles from '../css';
 
 class Article extends Component {
+  constructor(props) {
+    super(props);
+      this.state = {
+          command: false
+      };
+  }
   render() {
     const name = this.props.p_name || "";
     const desc = this.props.desc || "";
-
     return (
       <ScrollView horizontal={true}>
         <Image source={this.props.src} style={{marginTop: 20, marginRight: 30, marginLeft: 10, width: 100, height: 100, borderRadius: 1000}}/>
@@ -30,9 +36,20 @@ class Article extends Component {
              {"\t"}{desc}
             </Text>
           </Text>
-          <Image source={require("../public/img/cart.png")} style={{marginTop:35}}/>
+          <TouchableHighlight style={{marginTop:35}} onPress={() => this._command(name)}>
+            <Image source={require("../public/img/cart.png")} />
+          </TouchableHighlight>
       </ScrollView>
     );
+  }
+  _command(name) {
+    if (this.state.command) {
+      this.props.removeCommand(name);
+    }
+    else {
+      this.props.addCommand(name);
+    }
+    this.setState({command: !this.state.command});
   }
 }
 

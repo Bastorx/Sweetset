@@ -19,18 +19,11 @@ class Menu extends Component {
     const menu = (
       <View>
         <ScrollView>
-          <SquareButton onPress={() => Actions.home} text="Accueil" /> 
-          <SquareButton onPress={() => Actions.blog()} text="Blog" /> 
-          <SquareButton onPress={() => Actions.champagne} text="Champagnes" /> 
-          <SquareButton onPress={() => Actions.sweets} text="Sweets" /> 
-          <SquareButton onPress={() => Actions.vins} text="Vins" /> 
-          <SquareButton onPress={() => Actions.whisky} text="Whisky" /> 
-          <SquareButton onPress={() => Actions.chillout} text="Chillout" /> 
-          <SquareButton onPress={() => Actions.duLove} text="DuLove" /> 
-          <SquareButton onPress={() => Actions.theOffice} text="TheOffice" /> 
-          <SquareButton onPress={() => Actions.thisIsLaFamilia} text="ThisIsLaFamilia" /> 
-          <SquareButton onPress={() => Actions.entreprises} text="Entreprises" /> 
-          <SquareButton onPress={() => Actions.ephemeres} text="Ephemeres" /> 
+          <SquareButton onPress={() => Actions.home()} text="Accueil" /> 
+          <SquareButton onPress={() => Actions.login()} text="Login" />
+          <SquareButton onPress={() => Actions.paiement()} text="Paiement" />
+          <SquareButton onPress={() => Actions.blog()} text="Blog" />
+          <SquareButton onPress={() => Actions.commande()} text="Commande" /> 
         </ScrollView>
       </View>
       );
