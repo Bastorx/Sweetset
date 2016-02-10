@@ -9,14 +9,16 @@ import React, {
 } from 'react-native';
 import Button from 'react-native-button';
 import styles from '../css.js';
+import CheckBox from 'react-native-checkbox';
 
-
-class login extends Component {
+class inscription extends Component {
   constructor(props) {
       super(props);
       this.state = {
+          text: "",
           user: "",
-          password: ""
+          password: "",
+          checked: false
       };
   }
   render() {
@@ -24,7 +26,7 @@ class login extends Component {
       <Image source={require('../public/img/2.jpg')} style={styles.background}>
         <View style={styles.containerlogin}>
         <View style={{borderBottomWidth: 1, borderBottomColor: 'darkgrey', width: 200, justifyContent:"center", alignItems:"center"}}>
-          <Text style={{fontSize: 20, color: 'white', fontWeight: 'bold'}}>Se connecter</Text>
+          <Text style={{fontSize: 20, color: 'white', fontWeight: 'bold'}}>S'inscrire</Text>
         </View>
           <View style={{marginTop: 30}}/>          
           <TextInput
@@ -43,13 +45,22 @@ class login extends Component {
               onChangeText={(password) => this.setState({password})}
               value={this.state.password}
               />
-        <View style={{marginTop: 30, borderBottomWidth: 1, borderBottomColor: 'darkgrey', width: 200, justifyContent:"center", alignItems:"center"}}/>          
+        <View style={{marginTop: 30, width: 200, justifyContent:"center", alignItems:"center"}}/>          
+        <View style={{borderBottomWidth: 1, borderBottomColor: 'darkgrey', borderTopWidth: 1, borderTopColor: 'darkgrey', flex: 1}}>
+        <CheckBox
+          label="J'accepte les conditions d'utilisation"
+          labelStyle={{fontSize: 14, color: 'black', fontWeight: 'bold'}}
+          checked={this.state.checked}
+          onChange={() => this.setState({checked: !this.state.checked})}
+        />
+        </View>
+        <View style={{marginTop: 20}}/>          
           <Button
             style={{fontSize: 20, color: 'black'}}
             styleDisabled={{color: 'red'}}
             onPress={() => this._handlePress()}
           >
-            Connexion
+            Inscription
           </Button>
         </View>        
     </Image>
@@ -60,4 +71,4 @@ class login extends Component {
   }
 }
 
-export default login;
+export default inscription;

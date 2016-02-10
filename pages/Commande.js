@@ -5,11 +5,13 @@ import React, {
   ScrollView,
   Text,
   Image,
-  View
+  View,
+  TouchableHighlight
 } from 'react-native';
 
 import _ from 'lodash';
-
+import SquareButton from '../components/SquareButton';
+import {Actions} from 'react-native-router-flux';
 
 class Product extends Component {
   constructor(props) {
@@ -33,11 +35,21 @@ class Product extends Component {
             <Text>
             {"\t"}{this.props.prix}
             {"\n"}
+            {"\n"}
             </Text>
-            <Text style={{height:100,width:100,fontSize:14}}>
-             {"\n"}
-             {"\t"}{this.state.num}
+            <ScrollView horizontal={true}>
+            <TouchableHighlight onPress={() => this.state.num > 0 ? this.setState({num: this.state.num - 1 }) : _.noop}>
+            <Image source={require("../public/icons/minus75.png")} style={{width: 25, height: 25}} />
+            </TouchableHighlight>
+            <Text style={{fontSize:14}}>
+            {"\t"}{"     "}
+             {this.state.num}
+             {"\t"}{"     "}
             </Text>
+            <TouchableHighlight onPress={() => this.setState({num: this.state.num + 1 })}>
+            <Image source={require("../public/icons/add182.png")} style={{width: 25, height: 25}} />
+            </TouchableHighlight>
+            </ScrollView>
           </View>
       </ScrollView>
     );
@@ -45,9 +57,6 @@ class Product extends Component {
 }
 
 class Commande extends Component {
-  componentWillReceiveProps(newProps) {
-
-  }
   render() {
     return (
     	<ScrollView>
@@ -55,6 +64,9 @@ class Commande extends Component {
     			return (<Product src={{uri: c.img}} key={c.name} p_name={c.name} desc={c.description} prix={c.prix + " €"}/>);
     		})}
         {_.isEmpty(this.props.getCommand()) ? <Text>Veuillez dans un premier temps sélectionner des produits</Text> : null}
+        <View style={{alignItems: "center", marginTop: 20}}>
+        <SquareButton bgColor="rgba(142, 175, 120, 0.7)" text="Passer commande" onPress={() => Actions.paiement()} />
+        </View>
     	</ScrollView>
     );
   }

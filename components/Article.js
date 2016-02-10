@@ -10,6 +10,7 @@ import React, {
 } from 'react-native';
 
 import styles from '../css';
+import _ from 'lodash';
 
 class Article extends Component {
   constructor(props) {
@@ -37,8 +38,15 @@ class Article extends Component {
             </Text>
           </Text>
           <TouchableHighlight style={{marginTop:35}} onPress={() => this._command(name)}>
-            <Image source={require("../public/img/cart.png")} />
+          {
+            this.state.command ? <Image source={require("../public/icons/cart-red.png")} /> : <Image source={require("../public/icons/cart.png")} />
+          }
           </TouchableHighlight>
+          {!this.props.user ? null :
+          <TouchableHighlight style={{marginTop:35}} onPress={() => this.props.removeProduct(name)}>
+            <Image source={require("../public/icons/close40.png")} style={{height: 30, width: 30}}/>
+          </TouchableHighlight>
+        }
       </ScrollView>
     );
   }
